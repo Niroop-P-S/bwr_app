@@ -1,0 +1,472 @@
+<!DOCTYPE html><html lang="en" data-critters-container><head>
+  <meta charset="utf-8">
+  <title>BwrApp</title>
+  <base href="https://niroop-p-s.github.io/bwr_app/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>@font-face{font-family:'Rubik';font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXu61F3f.woff2) format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;}@font-face{font-family:'Rubik';font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXO61F3f.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Rubik';font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXq61F3f.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Rubik';font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXy61F3f.woff2) format('woff2');unicode-range:U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Rubik';font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXC61F3f.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Rubik';font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnX661A.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Rubik';font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nErXyi0A.woff2) format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC4, U+10EFC-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1;}@font-face{font-family:'Rubik';font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nMrXyi0A.woff2) format('woff2');unicode-range:U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Rubik';font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nFrXyi0A.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Rubik';font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nDrXyi0A.woff2) format('woff2');unicode-range:U+0307-0308, U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;}@font-face{font-family:'Rubik';font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nPrXyi0A.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Rubik';font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nBrXw.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>  
+<style>@charset "UTF-8";@font-face{font-family:Rubik;font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXu61F3f.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC,U+102E0-102FB,U+10E60-10E7E,U+10EC2-10EC4,U+10EFC-10EFF,U+1EE00-1EE03,U+1EE05-1EE1F,U+1EE21-1EE22,U+1EE24,U+1EE27,U+1EE29-1EE32,U+1EE34-1EE37,U+1EE39,U+1EE3B,U+1EE42,U+1EE47,U+1EE49,U+1EE4B,U+1EE4D-1EE4F,U+1EE51-1EE52,U+1EE54,U+1EE57,U+1EE59,U+1EE5B,U+1EE5D,U+1EE5F,U+1EE61-1EE62,U+1EE64,U+1EE67-1EE6A,U+1EE6C-1EE72,U+1EE74-1EE77,U+1EE79-1EE7C,U+1EE7E,U+1EE80-1EE89,U+1EE8B-1EE9B,U+1EEA1-1EEA3,U+1EEA5-1EEA9,U+1EEAB-1EEBB,U+1EEF0-1EEF1}@font-face{font-family:Rubik;font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXO61F3f.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Rubik;font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXq61F3f.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Rubik;font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXy61F3f.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}@font-face{font-family:Rubik;font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnXC61F3f.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Rubik;font-style:italic;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWEBXyIfDnIV7nEnX661A.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Rubik;font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nErXyi0A.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC,U+102E0-102FB,U+10E60-10E7E,U+10EC2-10EC4,U+10EFC-10EFF,U+1EE00-1EE03,U+1EE05-1EE1F,U+1EE21-1EE22,U+1EE24,U+1EE27,U+1EE29-1EE32,U+1EE34-1EE37,U+1EE39,U+1EE3B,U+1EE42,U+1EE47,U+1EE49,U+1EE4B,U+1EE4D-1EE4F,U+1EE51-1EE52,U+1EE54,U+1EE57,U+1EE59,U+1EE5B,U+1EE5D,U+1EE5F,U+1EE61-1EE62,U+1EE64,U+1EE67-1EE6A,U+1EE6C-1EE72,U+1EE74-1EE77,U+1EE79-1EE7C,U+1EE7E,U+1EE80-1EE89,U+1EE8B-1EE9B,U+1EEA1-1EEA3,U+1EEA5-1EEA9,U+1EEAB-1EEBB,U+1EEF0-1EEF1}@font-face{font-family:Rubik;font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nMrXyi0A.woff2) format("woff2");unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Rubik;font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nFrXyi0A.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:Rubik;font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nDrXyi0A.woff2) format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}@font-face{font-family:Rubik;font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nPrXyi0A.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Rubik;font-style:normal;font-weight:300 900;font-display:swap;src:url(https://fonts.gstatic.com/s/rubik/v28/iJWKBXyIfDnIV7nBrXw.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}body{font-family:Rubik,sans-serif}:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-black:#000;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13,110,253;--bs-secondary-rgb:108,117,125;--bs-success-rgb:25,135,84;--bs-info-rgb:13,202,240;--bs-warning-rgb:255,193,7;--bs-danger-rgb:220,53,69;--bs-light-rgb:248,249,250;--bs-dark-rgb:33,37,41;--bs-primary-text-emphasis:#052c65;--bs-secondary-text-emphasis:#2b2f32;--bs-success-text-emphasis:#0a3622;--bs-info-text-emphasis:#055160;--bs-warning-text-emphasis:#664d03;--bs-danger-text-emphasis:#58151c;--bs-light-text-emphasis:#495057;--bs-dark-text-emphasis:#495057;--bs-primary-bg-subtle:#cfe2ff;--bs-secondary-bg-subtle:#e2e3e5;--bs-success-bg-subtle:#d1e7dd;--bs-info-bg-subtle:#cff4fc;--bs-warning-bg-subtle:#fff3cd;--bs-danger-bg-subtle:#f8d7da;--bs-light-bg-subtle:#fcfcfd;--bs-dark-bg-subtle:#ced4da;--bs-primary-border-subtle:#9ec5fe;--bs-secondary-border-subtle:#c4c8cb;--bs-success-border-subtle:#a3cfbb;--bs-info-border-subtle:#9eeaf9;--bs-warning-border-subtle:#ffe69c;--bs-danger-border-subtle:#f1aeb5;--bs-light-border-subtle:#e9ecef;--bs-dark-border-subtle:#adb5bd;--bs-white-rgb:255,255,255;--bs-black-rgb:0,0,0;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-color-rgb:33,37,41;--bs-body-bg:#fff;--bs-body-bg-rgb:255,255,255;--bs-emphasis-color:#000;--bs-emphasis-color-rgb:0,0,0;--bs-secondary-color:rgba(33, 37, 41, .75);--bs-secondary-color-rgb:33,37,41;--bs-secondary-bg:#e9ecef;--bs-secondary-bg-rgb:233,236,239;--bs-tertiary-color:rgba(33, 37, 41, .5);--bs-tertiary-color-rgb:33,37,41;--bs-tertiary-bg:#f8f9fa;--bs-tertiary-bg-rgb:248,249,250;--bs-heading-color:inherit;--bs-link-color:#0d6efd;--bs-link-color-rgb:13,110,253;--bs-link-decoration:underline;--bs-link-hover-color:#0a58ca;--bs-link-hover-color-rgb:10,88,202;--bs-code-color:#d63384;--bs-highlight-color:#212529;--bs-highlight-bg:#fff3cd;--bs-border-width:1px;--bs-border-style:solid;--bs-border-color:#dee2e6;--bs-border-color-translucent:rgba(0, 0, 0, .175);--bs-border-radius:.375rem;--bs-border-radius-sm:.25rem;--bs-border-radius-lg:.5rem;--bs-border-radius-xl:1rem;--bs-border-radius-xxl:2rem;--bs-border-radius-2xl:var(--bs-border-radius-xxl);--bs-border-radius-pill:50rem;--bs-box-shadow:0 .5rem 1rem rgba(0, 0, 0, .15);--bs-box-shadow-sm:0 .125rem .25rem rgba(0, 0, 0, .075);--bs-box-shadow-lg:0 1rem 3rem rgba(0, 0, 0, .175);--bs-box-shadow-inset:inset 0 1px 2px rgba(0, 0, 0, .075);--bs-focus-ring-width:.25rem;--bs-focus-ring-opacity:.25;--bs-focus-ring-color:rgba(13, 110, 253, .25);--bs-form-valid-color:#198754;--bs-form-valid-border-color:#198754;--bs-form-invalid-color:#dc3545;--bs-form-invalid-border-color:#dc3545}*,:after,:before{box-sizing:border-box}@media (prefers-reduced-motion:no-preference){:root{scroll-behavior:smooth}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}h1,h2,h4,h5,h6{margin-top:0;margin-bottom:.5rem;font-weight:500;line-height:1.2;color:var(--bs-heading-color)}h1{font-size:calc(1.375rem + 1.5vw)}@media (min-width:1200px){h1{font-size:2.5rem}}h2{font-size:calc(1.325rem + .9vw)}@media (min-width:1200px){h2{font-size:2rem}}h4{font-size:calc(1.275rem + .3vw)}@media (min-width:1200px){h4{font-size:1.5rem}}h5{font-size:1.25rem}h6{font-size:1rem}p{margin-top:0;margin-bottom:1rem}ul{padding-left:2rem}ul{margin-top:0;margin-bottom:1rem}blockquote{margin:0 0 1rem}.small,small{font-size:.875em}a{color:rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));text-decoration:underline}a:hover{--bs-link-color-rgb:var(--bs-link-hover-color-rgb)}img{vertical-align:middle}button{border-radius:0}button:focus:not(:focus-visible){outline:0}button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button{text-transform:none}[type=button],button{-webkit-appearance:button}[type=button]:not(:disabled),button:not(:disabled){cursor:pointer}.lead{font-size:1.25rem;font-weight:300}.display-1{font-size:calc(1.625rem + 4.5vw);font-weight:300;line-height:1.2}@media (min-width:1200px){.display-1{font-size:5rem}}.display-5{font-size:calc(1.425rem + 2.1vw);font-weight:300;line-height:1.2}@media (min-width:1200px){.display-5{font-size:3rem}}.list-unstyled{padding-left:0;list-style:none}.img-fluid{max-width:100%;height:auto}.container,.container-fluid{--bs-gutter-x:1.5rem;--bs-gutter-y:0;width:100%;padding-right:calc(var(--bs-gutter-x) * .5);padding-left:calc(var(--bs-gutter-x) * .5);margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}@media (min-width:1400px){.container{max-width:1320px}}:root{--bs-breakpoint-xs:0;--bs-breakpoint-sm:576px;--bs-breakpoint-md:768px;--bs-breakpoint-lg:992px;--bs-breakpoint-xl:1200px;--bs-breakpoint-xxl:1400px}.row{--bs-gutter-x:1.5rem;--bs-gutter-y:0;display:flex;flex-wrap:wrap;margin-top:calc(-1 * var(--bs-gutter-y));margin-right:calc(-.5 * var(--bs-gutter-x));margin-left:calc(-.5 * var(--bs-gutter-x))}.row>*{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bs-gutter-x) * .5);padding-left:calc(var(--bs-gutter-x) * .5);margin-top:var(--bs-gutter-y)}.col{flex:1 0 0%}.g-4{--bs-gutter-x:1.5rem}.g-4{--bs-gutter-y:1.5rem}@media (min-width:768px){.col-md-4{flex:0 0 auto;width:33.33333333%}.col-md-6{flex:0 0 auto;width:50%}}@media (min-width:992px){.col-lg-4{flex:0 0 auto;width:33.33333333%}.col-lg-6{flex:0 0 auto;width:50%}}.btn{--bs-btn-padding-x:.75rem;--bs-btn-padding-y:.375rem;--bs-btn-font-family: ;--bs-btn-font-size:1rem;--bs-btn-font-weight:400;--bs-btn-line-height:1.5;--bs-btn-color:var(--bs-body-color);--bs-btn-bg:transparent;--bs-btn-border-width:var(--bs-border-width);--bs-btn-border-color:transparent;--bs-btn-border-radius:var(--bs-border-radius);--bs-btn-hover-border-color:transparent;--bs-btn-box-shadow:inset 0 1px 0 rgba(255, 255, 255, .15),0 1px 1px rgba(0, 0, 0, .075);--bs-btn-disabled-opacity:.65;--bs-btn-focus-box-shadow:0 0 0 .25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);display:inline-block;padding:var(--bs-btn-padding-y) var(--bs-btn-padding-x);font-family:var(--bs-btn-font-family);font-size:var(--bs-btn-font-size);font-weight:var(--bs-btn-font-weight);line-height:var(--bs-btn-line-height);color:var(--bs-btn-color);text-align:center;text-decoration:none;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;border:var(--bs-btn-border-width) solid var(--bs-btn-border-color);border-radius:var(--bs-btn-border-radius);background-color:var(--bs-btn-bg);transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media (prefers-reduced-motion:reduce){.btn{transition:none}}.btn:hover{color:var(--bs-btn-hover-color);background-color:var(--bs-btn-hover-bg);border-color:var(--bs-btn-hover-border-color)}.btn:focus-visible{color:var(--bs-btn-hover-color);background-color:var(--bs-btn-hover-bg);border-color:var(--bs-btn-hover-border-color);outline:0;box-shadow:var(--bs-btn-focus-box-shadow)}.btn:first-child:active,:not(.btn-check)+.btn:active{color:var(--bs-btn-active-color);background-color:var(--bs-btn-active-bg);border-color:var(--bs-btn-active-border-color)}.btn:first-child:active:focus-visible,:not(.btn-check)+.btn:active:focus-visible{box-shadow:var(--bs-btn-focus-box-shadow)}.btn:disabled{color:var(--bs-btn-disabled-color);pointer-events:none;background-color:var(--bs-btn-disabled-bg);border-color:var(--bs-btn-disabled-border-color);opacity:var(--bs-btn-disabled-opacity)}.btn-primary{--bs-btn-color:#fff;--bs-btn-bg:#0d6efd;--bs-btn-border-color:#0d6efd;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#0b5ed7;--bs-btn-hover-border-color:#0a58ca;--bs-btn-focus-shadow-rgb:49,132,253;--bs-btn-active-color:#fff;--bs-btn-active-bg:#0a58ca;--bs-btn-active-border-color:#0a53be;--bs-btn-active-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);--bs-btn-disabled-color:#fff;--bs-btn-disabled-bg:#0d6efd;--bs-btn-disabled-border-color:#0d6efd}.btn-dark{--bs-btn-color:#fff;--bs-btn-bg:#212529;--bs-btn-border-color:#212529;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#424649;--bs-btn-hover-border-color:#373b3e;--bs-btn-focus-shadow-rgb:66,70,73;--bs-btn-active-color:#fff;--bs-btn-active-bg:#4d5154;--bs-btn-active-border-color:#373b3e;--bs-btn-active-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);--bs-btn-disabled-color:#fff;--bs-btn-disabled-bg:#212529;--bs-btn-disabled-border-color:#212529}.btn-outline-light{--bs-btn-color:#f8f9fa;--bs-btn-border-color:#f8f9fa;--bs-btn-hover-color:#000;--bs-btn-hover-bg:#f8f9fa;--bs-btn-hover-border-color:#f8f9fa;--bs-btn-focus-shadow-rgb:248,249,250;--bs-btn-active-color:#000;--bs-btn-active-bg:#f8f9fa;--bs-btn-active-border-color:#f8f9fa;--bs-btn-active-shadow:inset 0 3px 5px rgba(0, 0, 0, .125);--bs-btn-disabled-color:#f8f9fa;--bs-btn-disabled-bg:transparent;--bs-btn-disabled-border-color:#f8f9fa;--bs-gradient:none}.btn-lg{--bs-btn-padding-y:.5rem;--bs-btn-padding-x:1rem;--bs-btn-font-size:1.25rem;--bs-btn-border-radius:var(--bs-border-radius-lg)}.collapse:not(.show){display:none}.dropdown{position:relative}.dropdown-toggle{white-space:nowrap}.dropdown-toggle:after{display:inline-block;margin-left:.255em;vertical-align:.255em;content:"";border-top:.3em solid;border-right:.3em solid transparent;border-bottom:0;border-left:.3em solid transparent}.dropdown-toggle:empty:after{margin-left:0}.dropdown-menu{--bs-dropdown-zindex:1000;--bs-dropdown-min-width:10rem;--bs-dropdown-padding-x:0;--bs-dropdown-padding-y:.5rem;--bs-dropdown-spacer:.125rem;--bs-dropdown-font-size:1rem;--bs-dropdown-color:var(--bs-body-color);--bs-dropdown-bg:var(--bs-body-bg);--bs-dropdown-border-color:var(--bs-border-color-translucent);--bs-dropdown-border-radius:var(--bs-border-radius);--bs-dropdown-border-width:var(--bs-border-width);--bs-dropdown-inner-border-radius:calc(var(--bs-border-radius) - var(--bs-border-width));--bs-dropdown-divider-bg:var(--bs-border-color-translucent);--bs-dropdown-divider-margin-y:.5rem;--bs-dropdown-box-shadow:var(--bs-box-shadow);--bs-dropdown-link-color:var(--bs-body-color);--bs-dropdown-link-hover-color:var(--bs-body-color);--bs-dropdown-link-hover-bg:var(--bs-tertiary-bg);--bs-dropdown-link-active-color:#fff;--bs-dropdown-link-active-bg:#0d6efd;--bs-dropdown-link-disabled-color:var(--bs-tertiary-color);--bs-dropdown-item-padding-x:1rem;--bs-dropdown-item-padding-y:.25rem;--bs-dropdown-header-color:#6c757d;--bs-dropdown-header-padding-x:1rem;--bs-dropdown-header-padding-y:.5rem;position:absolute;z-index:var(--bs-dropdown-zindex);display:none;min-width:var(--bs-dropdown-min-width);padding:var(--bs-dropdown-padding-y) var(--bs-dropdown-padding-x);margin:0;font-size:var(--bs-dropdown-font-size);color:var(--bs-dropdown-color);text-align:left;list-style:none;background-color:var(--bs-dropdown-bg);background-clip:padding-box;border:var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);border-radius:var(--bs-dropdown-border-radius)}.dropdown-item{display:block;width:100%;padding:var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);clear:both;font-weight:400;color:var(--bs-dropdown-link-color);text-align:inherit;text-decoration:none;white-space:nowrap;background-color:transparent;border:0;border-radius:var(--bs-dropdown-item-border-radius,0)}.dropdown-item:focus,.dropdown-item:hover{color:var(--bs-dropdown-link-hover-color);background-color:var(--bs-dropdown-link-hover-bg)}.dropdown-item:active{color:var(--bs-dropdown-link-active-color);text-decoration:none;background-color:var(--bs-dropdown-link-active-bg)}.dropdown-item:disabled{color:var(--bs-dropdown-link-disabled-color);pointer-events:none;background-color:transparent}.nav-link{display:block;padding:var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);font-size:var(--bs-nav-link-font-size);font-weight:var(--bs-nav-link-font-weight);color:var(--bs-nav-link-color);text-decoration:none;background:0 0;border:0;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out}@media (prefers-reduced-motion:reduce){.nav-link{transition:none}}.nav-link:focus,.nav-link:hover{color:var(--bs-nav-link-hover-color)}.nav-link:focus-visible{outline:0;box-shadow:0 0 0 .25rem #0d6efd40}.nav-link:disabled{color:var(--bs-nav-link-disabled-color);pointer-events:none;cursor:default}.navbar{--bs-navbar-padding-x:0;--bs-navbar-padding-y:.5rem;--bs-navbar-color:rgba(var(--bs-emphasis-color-rgb), .65);--bs-navbar-hover-color:rgba(var(--bs-emphasis-color-rgb), .8);--bs-navbar-disabled-color:rgba(var(--bs-emphasis-color-rgb), .3);--bs-navbar-active-color:rgba(var(--bs-emphasis-color-rgb), 1);--bs-navbar-brand-padding-y:.3125rem;--bs-navbar-brand-margin-end:1rem;--bs-navbar-brand-font-size:1.25rem;--bs-navbar-brand-color:rgba(var(--bs-emphasis-color-rgb), 1);--bs-navbar-brand-hover-color:rgba(var(--bs-emphasis-color-rgb), 1);--bs-navbar-nav-link-padding-x:.5rem;--bs-navbar-toggler-padding-y:.25rem;--bs-navbar-toggler-padding-x:.75rem;--bs-navbar-toggler-font-size:1.25rem;--bs-navbar-toggler-icon-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");--bs-navbar-toggler-border-color:rgba(var(--bs-emphasis-color-rgb), .15);--bs-navbar-toggler-border-radius:var(--bs-border-radius);--bs-navbar-toggler-focus-width:.25rem;--bs-navbar-toggler-transition:box-shadow .15s ease-in-out;position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:var(--bs-navbar-padding-y) var(--bs-navbar-padding-x)}.navbar>.container-fluid{display:flex;flex-wrap:inherit;align-items:center;justify-content:space-between}.navbar-brand{padding-top:var(--bs-navbar-brand-padding-y);padding-bottom:var(--bs-navbar-brand-padding-y);margin-right:var(--bs-navbar-brand-margin-end);font-size:var(--bs-navbar-brand-font-size);color:var(--bs-navbar-brand-color);text-decoration:none;white-space:nowrap}.navbar-brand:focus,.navbar-brand:hover{color:var(--bs-navbar-brand-hover-color)}.navbar-nav{--bs-nav-link-padding-x:0;--bs-nav-link-padding-y:.5rem;--bs-nav-link-font-weight: ;--bs-nav-link-color:var(--bs-navbar-color);--bs-nav-link-hover-color:var(--bs-navbar-hover-color);--bs-nav-link-disabled-color:var(--bs-navbar-disabled-color);display:flex;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none}.navbar-nav .nav-link.active{color:var(--bs-navbar-active-color)}.navbar-nav .dropdown-menu{position:static}.navbar-collapse{flex-basis:100%;flex-grow:1;align-items:center}.navbar-toggler{padding:var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);font-size:var(--bs-navbar-toggler-font-size);line-height:1;color:var(--bs-navbar-color);background-color:transparent;border:var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);border-radius:var(--bs-navbar-toggler-border-radius);transition:var(--bs-navbar-toggler-transition)}@media (prefers-reduced-motion:reduce){.navbar-toggler{transition:none}}.navbar-toggler:hover{text-decoration:none}.navbar-toggler:focus{text-decoration:none;outline:0;box-shadow:0 0 0 var(--bs-navbar-toggler-focus-width)}.navbar-toggler-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;background-image:var(--bs-navbar-toggler-icon-bg);background-repeat:no-repeat;background-position:center;background-size:100%}@media (min-width:992px){.navbar-expand-lg{flex-wrap:nowrap;justify-content:flex-start}.navbar-expand-lg .navbar-nav{flex-direction:row}.navbar-expand-lg .navbar-nav .dropdown-menu{position:absolute}.navbar-expand-lg .navbar-nav .nav-link{padding-right:var(--bs-navbar-nav-link-padding-x);padding-left:var(--bs-navbar-nav-link-padding-x)}.navbar-expand-lg .navbar-collapse{display:flex!important;flex-basis:auto}.navbar-expand-lg .navbar-toggler{display:none}}.d-inline-block{display:inline-block!important}.d-flex{display:flex!important}.shadow{box-shadow:var(--bs-box-shadow)!important}.position-relative{position:relative!important}.position-absolute{position:absolute!important}.top-50{top:50%!important}.start-50{left:50%!important}.translate-middle{transform:translate(-50%,-50%)!important}.border-top{border-top:var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important}.border-secondary{--bs-border-opacity:1;border-color:rgba(var(--bs-secondary-rgb),var(--bs-border-opacity))!important}.justify-content-center{justify-content:center!important}.align-items-center{align-items:center!important}.mt-4{margin-top:1.5rem!important}.me-2{margin-right:.5rem!important}.mb-0{margin-bottom:0!important}.mb-1{margin-bottom:.25rem!important}.mb-2{margin-bottom:.5rem!important}.mb-3{margin-bottom:1rem!important}.mb-4{margin-bottom:1.5rem!important}.mb-5{margin-bottom:3rem!important}.ms-auto{margin-left:auto!important}.pt-3{padding-top:1rem!important}.pt-5{padding-top:3rem!important}.pb-4{padding-bottom:1.5rem!important}.gap-3{gap:1rem!important}.fs-3{font-size:calc(1.3rem + .6vw)!important}.fs-6{font-size:1rem!important}.fw-bold{font-weight:700!important}.fw-bolder{font-weight:bolder!important}.text-center{text-align:center!important}.text-decoration-none{text-decoration:none!important}.text-uppercase{text-transform:uppercase!important}.text-warning{--bs-text-opacity:1;color:rgba(var(--bs-warning-rgb),var(--bs-text-opacity))!important}.text-light{--bs-text-opacity:1;color:rgba(var(--bs-light-rgb),var(--bs-text-opacity))!important}.text-white{--bs-text-opacity:1;color:rgba(var(--bs-white-rgb),var(--bs-text-opacity))!important}.text-light-emphasis{color:var(--bs-light-text-emphasis)!important}.bg-body-tertiary{--bs-bg-opacity:1;background-color:rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity))!important}.rounded{border-radius:var(--bs-border-radius)!important}.invisible{visibility:hidden!important}.z-1{z-index:1!important}@media (min-width:768px){.justify-content-md-start{justify-content:flex-start!important}.text-md-start{text-align:left!important}}@media (min-width:992px){.order-lg-1{order:1!important}.order-lg-2{order:2!important}}@media (min-width:1200px){.fs-3{font-size:1.75rem!important}}
+</style><link rel="stylesheet" href="styles-EJGFY7XV.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-EJGFY7XV.css"></noscript><style ng-app-id="ng">.navbar[_ngcontent-ng-c3574792297] {
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .nav-link[_ngcontent-ng-c3574792297] {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    color: #333;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-link[_ngcontent-ng-c3574792297]:hover, .nav-link.active[_ngcontent-ng-c3574792297] {
+    color: #0d6efd;
+  }
+  
+  .navbar-nav[_ngcontent-ng-c3574792297] {
+    align-items: center;
+  }
+  
+  .btn-dark[_ngcontent-ng-c3574792297] {
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  
+  .dropdown-menu[_ngcontent-ng-c3574792297] {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 8px;
+  }
+  
+  .dropdown-item[_ngcontent-ng-c3574792297] {
+    padding: 8px 20px;
+    font-weight: 500;
+  }
+  
+  .dropdown-item[_ngcontent-ng-c3574792297]:hover {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+  }
+  
+  @media (max-width: 991.98px) {
+    .navbar-collapse[_ngcontent-ng-c3574792297] {
+      padding: 20px 0;
+    }
+    
+    .navbar-nav[_ngcontent-ng-c3574792297] {
+      align-items: flex-start;
+    }
+    
+    .nav-item[_ngcontent-ng-c3574792297] {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  }</style><style ng-app-id="ng">*[_ngcontent-ng-c731572155]{font-family:Rubik,sans-serif}footer[_ngcontent-ng-c731572155]{background-color:#000}</style><style ng-app-id="ng">
+
+    .about-us-page[_ngcontent-ng-c2491656778] {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+    
+    .section-title[_ngcontent-ng-c2491656778] {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title[_ngcontent-ng-c2491656778]:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: #3A75C4;
+    }
+    
+    .section-subtitle[_ngcontent-ng-c2491656778] {
+      color: #666;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    section[_ngcontent-ng-c2491656778] {
+      padding: 100px 0;
+    }
+    
+    
+
+    .page-hero[_ngcontent-ng-c2491656778] {
+      background-color: #f8f9fa;
+      padding: 120px 0 100px;
+    }
+    
+    .page-title[_ngcontent-ng-c2491656778] {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    
+    .page-title[_ngcontent-ng-c2491656778]   span[_ngcontent-ng-c2491656778] {
+      color: #3A75C4;
+    }
+    
+    .hero-image[_ngcontent-ng-c2491656778]   img[_ngcontent-ng-c2491656778] {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    
+
+    .our-story[_ngcontent-ng-c2491656778] {
+      background-color: white;
+    }
+    
+    .story-content[_ngcontent-ng-c2491656778] {
+      padding: 20px;
+    }
+    
+    .timeline[_ngcontent-ng-c2491656778] {
+      position: relative;
+      padding: 30px 0;
+    }
+    
+    .timeline[_ngcontent-ng-c2491656778]:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20px;
+      height: 100%;
+      width: 2px;
+      background-color: #e9ecef;
+    }
+    
+    .timeline-item[_ngcontent-ng-c2491656778] {
+      position: relative;
+      padding-left: 45px;
+      margin-bottom: 30px;
+    }
+    
+    .year[_ngcontent-ng-c2491656778] {
+      position: absolute;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #3A75C4;
+      color: white;
+      text-align: center;
+      line-height: 40px;
+      font-weight: bold;
+      z-index: 1;
+    }
+    
+    .milestone[_ngcontent-ng-c2491656778]   h5[_ngcontent-ng-c2491656778] {
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    
+    .milestone[_ngcontent-ng-c2491656778]   p[_ngcontent-ng-c2491656778] {
+      margin-bottom: 0;
+      color: #666;
+    }
+    
+    
+
+    .our-approach[_ngcontent-ng-c2491656778] {
+      background-color: #f8f9fa;
+    }
+    
+    .approach-card[_ngcontent-ng-c2491656778] {
+      background-color: white;
+      border-radius: 15px;
+      padding: 30px;
+      height: 100%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .approach-card[_ngcontent-ng-c2491656778]:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .approach-icon[_ngcontent-ng-c2491656778] {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #3A75C4, #2c5c9c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: white;
+      font-size: 28px;
+    }
+    
+    .approach-card[_ngcontent-ng-c2491656778]   h4[_ngcontent-ng-c2491656778] {
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    
+
+    .team-section[_ngcontent-ng-c2491656778] {
+      background-color: white;
+    }
+    
+    .team-member[_ngcontent-ng-c2491656778] {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .team-member[_ngcontent-ng-c2491656778]:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .member-image[_ngcontent-ng-c2491656778] {
+      height: 300px;
+      overflow: hidden;
+    }
+    
+    .member-image[_ngcontent-ng-c2491656778]   img[_ngcontent-ng-c2491656778] {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+    
+    .team-member[_ngcontent-ng-c2491656778]:hover   .member-image[_ngcontent-ng-c2491656778]   img[_ngcontent-ng-c2491656778] {
+      transform: scale(1.05);
+    }
+    
+    .member-info[_ngcontent-ng-c2491656778] {
+      padding: 25px;
+    }
+    
+    .member-info[_ngcontent-ng-c2491656778]   h4[_ngcontent-ng-c2491656778] {
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    
+    .position[_ngcontent-ng-c2491656778] {
+      color: #3A75C4;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    
+    .bio[_ngcontent-ng-c2491656778] {
+      color: #666;
+      margin-bottom: 20px;
+    }
+    
+    .social-links[_ngcontent-ng-c2491656778] {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-links[_ngcontent-ng-c2491656778]   a[_ngcontent-ng-c2491656778] {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #3A75C4;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links[_ngcontent-ng-c2491656778]   a[_ngcontent-ng-c2491656778]:hover {
+      background-color: #3A75C4;
+      color: white;
+    }
+    
+    
+
+    .testimonial-highlight[_ngcontent-ng-c2491656778] {
+      background-color: #f8f9fa;
+    }
+    
+    .testimonial-wrapper[_ngcontent-ng-c2491656778] {
+      background-color: white;
+      border-radius: 15px;
+      padding: 50px;
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    
+    .testimonial-quote[_ngcontent-ng-c2491656778] {
+      position: absolute;
+      top: -20px;
+      left: 30px;
+      width: 70px;
+      height: 70px;
+      background-color: #3A75C4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 32px;
+    }
+    
+    blockquote[_ngcontent-ng-c2491656778] {
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .client-info[_ngcontent-ng-c2491656778] {
+      display: flex;
+      align-items: center;
+    }
+    
+    .client-image[_ngcontent-ng-c2491656778] {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 15px;
+      border: 3px solid #f0f0f0;
+    }
+    
+    .client-info[_ngcontent-ng-c2491656778]   h5[_ngcontent-ng-c2491656778] {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+    
+    .client-info[_ngcontent-ng-c2491656778]   p[_ngcontent-ng-c2491656778] {
+      color: #666;
+      margin: 0;
+    }
+    
+    
+
+    .cta-section[_ngcontent-ng-c2491656778] {
+      background: linear-gradient(135deg, #3A75C4, #2c5c9c);
+      color: white;
+      padding: 80px 0;
+    }
+    
+    .cta-section[_ngcontent-ng-c2491656778]   h2[_ngcontent-ng-c2491656778] {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-section[_ngcontent-ng-c2491656778]   p[_ngcontent-ng-c2491656778] {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    
+    .cta-buttons[_ngcontent-ng-c2491656778] {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+    }
+    
+    .btn-primary[_ngcontent-ng-c2491656778] {
+      background-color: white;
+      color: #3A75C4;
+      border: none;
+      font-weight: 600;
+      padding: 12px 30px;
+    }
+    
+    .btn-outline-light[_ngcontent-ng-c2491656778] {
+      border: 2px solid white;
+      font-weight: 600;
+      padding: 12px 30px;
+    }
+    
+    
+
+    @media (max-width: 991.98px) {
+      .page-title[_ngcontent-ng-c2491656778] {
+        font-size: 2.5rem;
+      }
+      
+      section[_ngcontent-ng-c2491656778] {
+        padding: 80px 0;
+      }
+      
+      .testimonial-wrapper[_ngcontent-ng-c2491656778] {
+        padding: 40px 30px;
+      }
+    }
+    
+    @media (max-width: 767.98px) {
+      .page-title[_ngcontent-ng-c2491656778] {
+        font-size: 2rem;
+        text-align: center;
+      }
+      
+      .page-hero[_ngcontent-ng-c2491656778] {
+        padding: 80px 0 60px;
+        text-align: center;
+      }
+      
+      .hero-image[_ngcontent-ng-c2491656778] {
+        margin-top: 40px;
+      }
+      
+      section[_ngcontent-ng-c2491656778] {
+        padding: 60px 0;
+      }
+      
+      .story-content[_ngcontent-ng-c2491656778] {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      
+      .section-title[_ngcontent-ng-c2491656778]:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .team-member[_ngcontent-ng-c2491656778] {
+        margin-bottom: 30px;
+      }
+      
+      .testimonial-wrapper[_ngcontent-ng-c2491656778] {
+        padding: 40px 20px;
+      }
+      
+      .cta-buttons[_ngcontent-ng-c2491656778] {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .cta-section[_ngcontent-ng-c2491656778]   h2[_ngcontent-ng-c2491656778] {
+        font-size: 2rem;
+      }
+      
+      .team-member[_ngcontent-ng-c2491656778] {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }</style></head>
+<body><!--nghm-->
+  <app-root _nghost-ng-c582792440 ng-version="18.2.13" ngh="1" ng-server-context="ssg"><app-navbar _ngcontent-ng-c582792440 _nghost-ng-c3574792297 ngh="0"><nav _ngcontent-ng-c3574792297 class="navbar navbar-expand-lg navbar-light bg-body-tertiary mb-3"><div _ngcontent-ng-c3574792297 class="container-fluid"><div _ngcontent-ng-c3574792297 class="d-flex align-items-center"><button _ngcontent-ng-c3574792297 type="button" class="navbar-toggler me-2"><span _ngcontent-ng-c3574792297 class="navbar-toggler-icon"></span></button><a _ngcontent-ng-c3574792297 routerlinkactive="active" class="navbar-brand" href="https://niroop-p-s.github.io/bwr_app/home"><img _ngcontent-ng-c3574792297 src="bwr_black.png" alt="Logo" style="height: 40px;"></a></div><div _ngcontent-ng-c3574792297 class="collapse navbar-collapse"><ul _ngcontent-ng-c3574792297 class="navbar-nav ms-auto"><li _ngcontent-ng-c3574792297 ngbdropdown class="nav-item dropdown"><a _ngcontent-ng-c3574792297 id="programsDropdown" ngbdropdowntoggle class="dropdown-toggle nav-link" aria-expanded="false"> Programs </a><div _ngcontent-ng-c3574792297 aria-labelledby="programsDropdown" ngbdropdownmenu class="dropdown-menu"><a _ngcontent-ng-c3574792297 class="dropdown-item">1-1 Coaching</a><a _ngcontent-ng-c3574792297 class="dropdown-item">Online personal training</a><a _ngcontent-ng-c3574792297 class="dropdown-item">Diet and Nutrition</a><a _ngcontent-ng-c3574792297 class="dropdown-item">Online Programs</a></div></li><li _ngcontent-ng-c3574792297 class="nav-item"><a _ngcontent-ng-c3574792297 routerlinkactive="active" class="nav-link active" href="https://niroop-p-s.github.io/bwr_app/about-us">About Us</a></li><li _ngcontent-ng-c3574792297 class="nav-item"><a _ngcontent-ng-c3574792297 routerlinkactive="active" class="nav-link">Blog</a></li><li _ngcontent-ng-c3574792297 class="nav-item"><a _ngcontent-ng-c3574792297 routerlinkactive="active" class="nav-link">Contact</a></li></ul></div><button _ngcontent-ng-c3574792297 class="btn btn-dark">Transform Now</button></div></nav></app-navbar><router-outlet _ngcontent-ng-c582792440></router-outlet><app-about-us _nghost-ng-c2491656778 ngh="0"><div _ngcontent-ng-c2491656778 class="about-us-page"><section _ngcontent-ng-c2491656778 class="page-hero"><div _ngcontent-ng-c2491656778 class="container"><div _ngcontent-ng-c2491656778 class="row align-items-center"><div _ngcontent-ng-c2491656778 class="col-lg-6"><h1 _ngcontent-ng-c2491656778 class="page-title">About <span _ngcontent-ng-c2491656778>Built With Resilience</span></h1><p _ngcontent-ng-c2491656778 class="lead">We're on a mission to transform lives through personalized fitness, proven nutrition strategies, and unwavering support.</p></div><div _ngcontent-ng-c2491656778 class="col-lg-6"><div _ngcontent-ng-c2491656778 class="hero-image"><img _ngcontent-ng-c2491656778 src="herosec.png" alt="Team BWR Fitness" class="img-fluid rounded shadow"></div></div></div></div></section><section _ngcontent-ng-c2491656778 class="our-story"><div _ngcontent-ng-c2491656778 class="container"><div _ngcontent-ng-c2491656778 class="row align-items-center"><div _ngcontent-ng-c2491656778 class="col-lg-6 order-lg-2"><div _ngcontent-ng-c2491656778 class="story-content"><h2 _ngcontent-ng-c2491656778 class="section-title">Our Story</h2><p _ngcontent-ng-c2491656778>Since founding BWR Fitness in 2018, our journey has been guided by a singular vision: to create a fitness experience that truly delivers results while cutting through the noise and misinformation that plagues the industry.</p><p _ngcontent-ng-c2491656778>What started as a small personal training service has grown into a comprehensive fitness solution that has helped over 1,200 clients transform their bodies and lives. Our approach combines science-backed training methodologies, personalized nutrition planning, and psychological support to ensure sustainable results.</p><p _ngcontent-ng-c2491656778>Unlike conventional gyms that prioritize membership numbers over results, we've built our reputation on client transformations and long-term success stories. Every program we design represents our commitment to excellence and our belief that fitness should be accessible, effective, and sustainable for everyone.</p></div></div><div _ngcontent-ng-c2491656778 class="col-lg-6 order-lg-1"><div _ngcontent-ng-c2491656778 class="timeline"><div _ngcontent-ng-c2491656778 class="timeline-item"><div _ngcontent-ng-c2491656778 class="year">2018</div><div _ngcontent-ng-c2491656778 class="milestone"><h5 _ngcontent-ng-c2491656778>BWR Fitness Founded</h5><p _ngcontent-ng-c2491656778>Started with just 5 clients and a passion for transformation</p></div></div><div _ngcontent-ng-c2491656778 class="timeline-item"><div _ngcontent-ng-c2491656778 class="year">2019</div><div _ngcontent-ng-c2491656778 class="milestone"><h5 _ngcontent-ng-c2491656778>First 100 Transformations</h5><p _ngcontent-ng-c2491656778>Reached milestone of helping 100 clients achieve their goals</p></div></div><div _ngcontent-ng-c2491656778 class="timeline-item"><div _ngcontent-ng-c2491656778 class="year">2020</div><div _ngcontent-ng-c2491656778 class="milestone"><h5 _ngcontent-ng-c2491656778>Online Training Launch</h5><p _ngcontent-ng-c2491656778>Expanded services to reach clients worldwide</p></div></div><div _ngcontent-ng-c2491656778 class="timeline-item"><div _ngcontent-ng-c2491656778 class="year">2021</div><div _ngcontent-ng-c2491656778 class="milestone"><h5 _ngcontent-ng-c2491656778>Nutrition Certification</h5><p _ngcontent-ng-c2491656778>Added advanced nutrition protocols to all programs</p></div></div><div _ngcontent-ng-c2491656778 class="timeline-item"><div _ngcontent-ng-c2491656778 class="year">2023</div><div _ngcontent-ng-c2491656778 class="milestone"><h5 _ngcontent-ng-c2491656778>1,000+ Client Milestone</h5><p _ngcontent-ng-c2491656778>Celebrated helping over 1,000 clients transform their lives</p></div></div></div></div></div></div></section><section _ngcontent-ng-c2491656778 class="our-approach"><div _ngcontent-ng-c2491656778 class="container"><div _ngcontent-ng-c2491656778 class="text-center mb-5"><h2 _ngcontent-ng-c2491656778 class="section-title">Our Approach</h2><p _ngcontent-ng-c2491656778 class="section-subtitle">What makes BWR different from other fitness programs</p></div><div _ngcontent-ng-c2491656778 class="row g-4"><div _ngcontent-ng-c2491656778 class="col-md-4"><div _ngcontent-ng-c2491656778 class="approach-card"><div _ngcontent-ng-c2491656778 class="approach-icon"><i _ngcontent-ng-c2491656778 class="bi bi-bullseye"></i></div><h4 _ngcontent-ng-c2491656778>Personalized Programming</h4><p _ngcontent-ng-c2491656778>Every program is custom-designed based on your body type, goals, lifestyle, and preferences. No cookie-cutter plans or generic workouts.</p></div></div><div _ngcontent-ng-c2491656778 class="col-md-4"><div _ngcontent-ng-c2491656778 class="approach-card"><div _ngcontent-ng-c2491656778 class="approach-icon"><i _ngcontent-ng-c2491656778 class="bi bi-graph-up-arrow"></i></div><h4 _ngcontent-ng-c2491656778>Data-Driven Results</h4><p _ngcontent-ng-c2491656778>We track progress meticulously and make real-time adjustments to ensure consistent progress. Your results are measured, not guessed.</p></div></div><div _ngcontent-ng-c2491656778 class="col-md-4"><div _ngcontent-ng-c2491656778 class="approach-card"><div _ngcontent-ng-c2491656778 class="approach-icon"><i _ngcontent-ng-c2491656778 class="bi bi-heart-pulse"></i></div><h4 _ngcontent-ng-c2491656778>Holistic Wellness</h4><p _ngcontent-ng-c2491656778>We address all aspects of health including training, nutrition, recovery, sleep, and stress management for truly sustainable results.</p></div></div></div></div></section><section _ngcontent-ng-c2491656778 class="team-section"><div _ngcontent-ng-c2491656778 class="container"><div _ngcontent-ng-c2491656778 class="text-center mb-5"><h2 _ngcontent-ng-c2491656778 class="section-title">Meet Our Team</h2><p _ngcontent-ng-c2491656778 class="section-subtitle">The experts behind your transformation journey</p></div><div _ngcontent-ng-c2491656778 class="row g-4"><div _ngcontent-ng-c2491656778 class="col-lg-4 col-md-6"><div _ngcontent-ng-c2491656778 class="team-member"><div _ngcontent-ng-c2491656778 class="member-image"><img _ngcontent-ng-c2491656778 src="assets/trainer1.jpg" alt="David Martinez" class="img-fluid"></div><div _ngcontent-ng-c2491656778 class="member-info"><h4 _ngcontent-ng-c2491656778>David Martinez</h4><p _ngcontent-ng-c2491656778 class="position">Founder &amp; Head Coach</p><p _ngcontent-ng-c2491656778 class="bio">With over 10 years of experience and multiple certifications in strength training, David has helped hundreds of clients transform their bodies and lives.</p><div _ngcontent-ng-c2491656778 class="social-links"><a _ngcontent-ng-c2491656778 href="#"><i _ngcontent-ng-c2491656778 class="bi bi-instagram"></i></a><a _ngcontent-ng-c2491656778 href="#"><i _ngcontent-ng-c2491656778 class="bi bi-facebook"></i></a><a _ngcontent-ng-c2491656778 href="#"><i _ngcontent-ng-c2491656778 class="bi bi-linkedin"></i></a></div></div></div></div><div _ngcontent-ng-c2491656778 class="col-lg-4 col-md-6"><div _ngcontent-ng-c2491656778 class="team-member"><div _ngcontent-ng-c2491656778 class="member-image"><img _ngcontent-ng-c2491656778 src="assets/trainer2.jpg" alt="Jennifer Wilson" class="img-fluid"></div><div _ngcontent-ng-c2491656778 class="member-info"><h4 _ngcontent-ng-c2491656778>Jennifer Wilson</h4><p _ngcontent-ng-c2491656778 class="position">Nutrition Specialist</p><p _ngcontent-ng-c2491656778 class="bio">Jennifer specializes in nutrition planning that fits your lifestyle. Her approach focuses on sustainable eating habits rather than restrictive diets.</p><div _ngcontent-ng-c2491656778 class="social-links"><a _ngcontent-ng-c2491656778 href="#"><i _ngcontent-ng-c2491656778 class="bi bi-instagram"></i></a><a _ngcontent-ng-c2491656778 href="#"><i _ngcontent-ng-c2491656778 class="bi bi-facebook"></i></a><a _ngcontent-ng-c2491656778 href="#"><i _ngcontent-ng-c2491656778 class="bi bi-linkedin"></i></a></div></div></div></div><div _ngcontent-ng-c2491656778 class="col-lg-4 col-md-6"><div _ngcontent-ng-c2491656778 class="team-member"><div _ngcontent-ng-c2491656778 class="member-image"><img _ngcontent-ng-c2491656778 src="assets/trainer3.jpg" alt="Alex Thompson" class="img-fluid"></div><div _ngcontent-ng-c2491656778 class="member-info"><h4 _ngcontent-ng-c2491656778>Alex Thompson</h4><p _ngcontent-ng-c2491656778 class="position">Strength &amp; Conditioning Coach</p><p _ngcontent-ng-c2491656778 class="bio">Former athlete turned coach, Alex brings expertise in functional movement, mobility, and athletic performance to help clients reach their peak potential.</p><div _ngcontent-ng-c2491656778 class="social-links"><a _ngcontent-ng-c2491656778 href="#"><i _ngcontent-ng-c2491656778 class="bi bi-instagram"></i></a><a _ngcontent-ng-c2491656778 href="#"><i _ngcontent-ng-c2491656778 class="bi bi-facebook"></i></a><a _ngcontent-ng-c2491656778 href="#"><i _ngcontent-ng-c2491656778 class="bi bi-linkedin"></i></a></div></div></div></div></div></div></section><section _ngcontent-ng-c2491656778 class="testimonial-highlight"><div _ngcontent-ng-c2491656778 class="container"><div _ngcontent-ng-c2491656778 class="testimonial-wrapper"><div _ngcontent-ng-c2491656778 class="testimonial-quote"><i _ngcontent-ng-c2491656778 class="bi bi-quote"></i></div><blockquote _ngcontent-ng-c2491656778> "Working with BWR completely changed my relationship with fitness. For the first time, I found a program that was built around my needs, not the other way around. The results speak for themselves - I've lost 45 pounds and gained confidence I never thought possible." </blockquote><div _ngcontent-ng-c2491656778 class="client-info"><img _ngcontent-ng-c2491656778 src="assets/client1.jpg" alt="Sarah J." class="client-image"><div _ngcontent-ng-c2491656778><h5 _ngcontent-ng-c2491656778>Sarah Johnson</h5><p _ngcontent-ng-c2491656778>Member since 2021</p></div></div></div></div></section><section _ngcontent-ng-c2491656778 class="cta-section"><div _ngcontent-ng-c2491656778 class="container text-center"><h2 _ngcontent-ng-c2491656778>Ready to Start Your Transformation?</h2><p _ngcontent-ng-c2491656778>Join the BWR family and discover what your body is truly capable of achieving.</p><div _ngcontent-ng-c2491656778 class="cta-buttons"><a _ngcontent-ng-c2491656778 href="/contact" class="btn btn-primary btn-lg">Contact Us</a><a _ngcontent-ng-c2491656778 href="/programs" class="btn btn-outline-light btn-lg">Explore Programs</a></div></div></section></div></app-about-us><!----><app-footer _ngcontent-ng-c582792440 _nghost-ng-c731572155 ngh="0"><footer _ngcontent-ng-c731572155 class="text-white pt-5 pb-4"><div _ngcontent-ng-c731572155 class="container"><div _ngcontent-ng-c731572155 class="row mb-5"><div _ngcontent-ng-c731572155 class="col text-center"><div _ngcontent-ng-c731572155 class="position-relative"><h2 _ngcontent-ng-c731572155 class="display-1 fw-bolder text-uppercase opacity-10 position-absolute start-50 top-50 translate-middle" style="opacity: 0.2; font-size: 8rem; letter-spacing: 5px;">BWR</h2><div _ngcontent-ng-c731572155 class="position-relative z-1"><h2 _ngcontent-ng-c731572155 class="display-5 fw-bold text-uppercase mb-2" style="letter-spacing: 2px;"><span _ngcontent-ng-c731572155 class="d-inline-block">TRAIN WITH US</span></h2><div _ngcontent-ng-c731572155 class="d-flex justify-content-center align-items-center gap-3 mb-2"><div _ngcontent-ng-c731572155 class="line" style="height: 2px; width: 50px; background-color: rgba(255,255,255,0.3);"></div><i _ngcontent-ng-c731572155 class="bi bi-lightning-charge-fill text-warning"></i><div _ngcontent-ng-c731572155 class="line" style="height: 2px; width: 50px; background-color: rgba(255,255,255,0.3);"></div></div><p _ngcontent-ng-c731572155 class="text-uppercase fs-6" style="letter-spacing: 4px; color: #aaa;">transform your fitness</p></div></div></div></div><div _ngcontent-ng-c731572155 class="row"><div _ngcontent-ng-c731572155 class="col-lg-4 col-md-6 mb-4"><h5 _ngcontent-ng-c731572155 class="mb-3 invisible text-center text-md-start">SPACER</h5><div _ngcontent-ng-c731572155 class="d-flex justify-content-center justify-content-md-start mb-3"><img _ngcontent-ng-c731572155 src="bwr_white.png" alt="Logo" height="50" class="me-2"></div></div><div _ngcontent-ng-c731572155 class="col-lg-4 col-md-6 mb-4"><h5 _ngcontent-ng-c731572155 class="mb-3 text-center text-md-start">OUR PROGRAMS</h5><ul _ngcontent-ng-c731572155 class="list-unstyled text-center text-md-start"><li _ngcontent-ng-c731572155 class="mb-2"><a _ngcontent-ng-c731572155 href="#" class="text-decoration-none text-light">Personal Training</a></li><li _ngcontent-ng-c731572155 class="mb-2"><a _ngcontent-ng-c731572155 href="#" class="text-decoration-none text-light">Group Classes</a></li><li _ngcontent-ng-c731572155 class="mb-2"><a _ngcontent-ng-c731572155 href="#" class="text-decoration-none text-light">Nutrition Coaching</a></li><li _ngcontent-ng-c731572155 class="mb-2"><a _ngcontent-ng-c731572155 href="#" class="text-decoration-none text-light">Online Programs</a></li><li _ngcontent-ng-c731572155 class="mb-2"><a _ngcontent-ng-c731572155 href="#" class="text-decoration-none text-light">Corporate Wellness</a></li></ul></div><div _ngcontent-ng-c731572155 class="col-lg-4 col-md-6 mb-4"><h5 _ngcontent-ng-c731572155 class="mb-3 text-center text-md-start">CONNECT WITH US</h5><div _ngcontent-ng-c731572155 class="mb-4 text-center text-md-start"><p _ngcontent-ng-c731572155 class="mb-1"><i _ngcontent-ng-c731572155 class="bi bi-geo-alt me-2"></i> 123 Fitness Street, City</p><p _ngcontent-ng-c731572155 class="mb-1"><i _ngcontent-ng-c731572155 class="bi bi-envelope me-2"></i> info@example.com</p><p _ngcontent-ng-c731572155 class="mb-1"><i _ngcontent-ng-c731572155 class="bi bi-telephone me-2"></i> (123) 456-7890</p></div><div _ngcontent-ng-c731572155 class="d-flex justify-content-center justify-content-md-start"><a _ngcontent-ng-c731572155 href="https://www.instagram.com/bwr" class="text-decoration-none text-light"><div _ngcontent-ng-c731572155 class="d-flex align-items-center"><i _ngcontent-ng-c731572155 class="bi bi-instagram fs-3 me-2"></i><div _ngcontent-ng-c731572155><h6 _ngcontent-ng-c731572155 class="mb-0 fw-bold">@BWRfitness</h6><small _ngcontent-ng-c731572155 class="text-light-emphasis">Follow us on Instagram</small></div></div></a></div></div></div><div _ngcontent-ng-c731572155 class="row mt-4"><div _ngcontent-ng-c731572155 class="col text-center border-top border-secondary pt-3"><p _ngcontent-ng-c731572155 class="small">© 2025 BWR Fitness. All rights reserved.</p></div></div></div></footer></app-footer></app-root>
+<script src="polyfills-MH2GNY63.js" type="module"></script><script src="scripts-NR4RWAQV.js" defer></script><script src="main-A5KT2SVV.js" type="module"></script>
+<script id="ng-state" type="application/json">{"__nghData__":[{},{"c":{"1":[{"i":"c2491656778","r":1}]}}]}</script></body></html>
