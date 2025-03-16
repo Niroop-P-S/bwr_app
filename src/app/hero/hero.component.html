@@ -1,0 +1,94 @@
+<section class="hero">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <!-- Text content on left -->
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="hero-content">
+            <h1 class="display-4 fw-bold">Get ready to transform now</h1>
+            <p class="lead my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras porttitor augue vel felis elementum varius.</p>
+            <button class="btn btn-dark btn-lg px-4 py-2">Explore transformation</button>
+          </div>
+        </div>
+        <!-- Image on right -->
+        <div class="col-lg-6">
+          <div class="hero-image-container">
+            <img src="pavanT.png" alt="Transformation" class="hero-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <style>
+    .hero {
+      background-color: #000;
+      height: 100vh;
+      position: relative;
+      filter: grayscale(100%);
+      overflow: hidden;
+    }
+  
+    .hero-content {
+      padding: 2.5rem;
+      color: white;
+    }
+  
+    .hero-image-container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .hero-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+  
+    .btn-dark {
+      background-color: #000;
+      border: 2px solid #fff;
+      transition: all 0.3s ease;
+    }
+  
+    .btn-dark:hover {
+      background-color: #fff;
+      color: #000;
+      transform: translateY(-3px);
+    }
+  
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      .hero {
+        height: auto;
+        padding: 6rem 0;
+      }
+      
+      .hero-content {
+        text-align: center;
+        border-left: none;
+        margin-bottom: 2rem;
+      }
+  
+      .hero-image {
+        max-width: 80%;
+        margin: 0 auto;
+      }
+    }
+  
+    @media (max-width: 767px) {
+      .hero {
+        padding: 4rem 0;
+      }
+      
+      .hero-content {
+        padding: 1.5rem;
+      }
+  
+      .hero-image {
+        max-width: 100%;
+      }
+    }
+  </style>
