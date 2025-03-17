@@ -1,10 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-programs',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    RouterModule
+
+  ],
   templateUrl: './programs.component.html',
   styleUrl: './programs.component.css'
 })
