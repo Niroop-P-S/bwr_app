@@ -1,0 +1,84 @@
+/* Horizontal scroll container for mobile */
+.scroll-container {
+  width: calc(100% + 30px);
+    position: relative;
+    /* padding: 0 0 20px; */
+    overflow: hidden;
+  }
+  
+  .scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    /* padding: 10px 5px 20px; */
+  }
+  
+  .scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+  }
+  
+  .scroll-card {
+    flex: 0 0 auto;
+    width: 80%;
+    padding: 0 8px;
+    scroll-snap-align: center;
+  }
+  
+  /* Scroll indicator dots */
+  .scroll-indicator-dots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #333;
+  }
+  
+  /* Card styling */
+  .card-light {
+    background-color: #fff;
+    border: none;
+  }
+  
+  .card-dark {
+    background-color: #212529;
+    border: none;
+    color: white;
+  }
+
+   /* Fix for cards overlapping in mobile view */
+   .scroll-wrapper {
+    gap: 40px;  /* Increased gap between cards */
+    padding: 15px 10px 25px;
+  }
+  
+  .scroll-card {
+    padding: 0 5px;  /* Add padding around each card */
+    margin-right: 5px;  /* Additional right margin */
+  }
+  
+  /* Ensure proper card width for small devices */
+  @media (max-width: 576px) {
+    .scroll-card {
+      width: 75%;
+      min-width: 240px;
+    }
+    
+    /* Ensure cards don't touch each other */
+    .scroll-wrapper {
+      scroll-padding: 0 15px;  /* Improves snap alignment */
+    }
+  }

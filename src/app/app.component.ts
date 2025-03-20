@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 import { LoadingService } from './loading.service';
 import { filter } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ScrollTopComponent } from "./scroll-top/scroll-top.component";
 
 @Component({
   selector: 'app-root',
@@ -20,8 +22,8 @@ import { isPlatformBrowser } from '@angular/common';
   imports: [RouterOutlet,
     NavbarComponent,
     FooterComponent,
-    LoadingOverlayComponent
-  ],
+    LoadingOverlayComponent,
+    ReactiveFormsModule, ScrollTopComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

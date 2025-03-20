@@ -4,11 +4,12 @@ import { ChooseUsComponent } from "../choose-us/choose-us.component";
 import { TrainersComponent } from "../trainers/trainers.component";
 import { TestimonialsComponent } from "../testimonials/testimonials.component";
 import { HeroComponent } from '../hero/hero.component';
+import { AboutTabComponent } from "../about-tab/about-tab.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProgramsComponent, ChooseUsComponent, TrainersComponent, TestimonialsComponent, HeroComponent],
+  imports: [ProgramsComponent, ChooseUsComponent, TrainersComponent, TestimonialsComponent, HeroComponent, AboutTabComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

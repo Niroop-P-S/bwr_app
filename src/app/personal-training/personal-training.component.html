@@ -9,8 +9,8 @@
         <div class="row align-items-center min-vh-40">
           <div class="col-lg-8 position-relative">
             <h1 class="display-4 fw-bold mb-3">Online Personal Training Programs</h1>
-            <p class="lead mb-4">Your Path to Fitness Success—Anywhere in the World</p>
-            <a href="#get-started" class="btn btn-light btn-lg px-4 shadow-sm">Start Your Journey</a>
+            <p class="lead mb-4">Your Path to Fitness Success Anywhere in the World</p>
+            <a href="#get-started" class="btn btn-light btn-lg shadow-sm">Book Free Consultation</a>
           </div>
         </div>
       </div>
@@ -176,7 +176,7 @@
     </section>
     
     <!-- Why Choose Us Section -->
-    <section class="why-us-section py-5">
+    <section class="why-us-section">
       <div class="container">
         <div class="row justify-content-center mb-5">
           <div class="col-lg-8 text-center">
@@ -232,81 +232,7 @@
         </div>
       </div>
     </section>
-  
-    <!-- Program Options Section -->
-    <section class="programs-section py-5 bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-lg-8 text-center">
-            <h2 class="section-title">Training Programs</h2>
-            <div class="section-divider mx-auto">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <p class="lead">Choose the program that best fits your fitness goals</p>
-          </div>
-        </div>
-        
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
-            <div class="program-card">
-              <div class="program-header">
-                <h3>Weight Loss</h3>
-                <span class="program-tag">Most Popular</span>
-              </div>
-              <div class="program-body">
-                <ul class="program-features">
-                  <li><i class="bi bi-check-circle-fill"></i> Customized cardio routines</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Calorie-burning workouts</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Nutrition plan for fat loss</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Weekly progress tracking</li>
-                  <li><i class="bi bi-check-circle-fill"></i> 4 video sessions per month</li>
-                </ul>
-                <a href="#get-started" class="btn btn-dark w-100">Learn More</a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-4">
-            <div class="program-card">
-              <div class="program-header">
-                <h3>Strength Training</h3>
-              </div>
-              <div class="program-body">
-                <ul class="program-features">
-                  <li><i class="bi bi-check-circle-fill"></i> Progressive resistance training</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Muscle building techniques</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Protein-focused nutrition plan</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Strength assessment</li>
-                  <li><i class="bi bi-check-circle-fill"></i> 4 video sessions per month</li>
-                </ul>
-                <a href="#get-started" class="btn btn-dark w-100">Learn More</a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-4 mx-auto">
-            <div class="program-card featured">
-              <div class="program-header">
-                <h3>Complete Transformation</h3>
-                <span class="program-tag">Best Value</span>
-              </div>
-              <div class="program-body">
-                <ul class="program-features">
-                  <li><i class="bi bi-check-circle-fill"></i> Combined weight loss & strength</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Full body transformation plan</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Comprehensive nutrition guidance</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Bi-weekly assessments</li>
-                  <li><i class="bi bi-check-circle-fill"></i> 8 video sessions per month</li>
-                </ul>
-                <a href="#get-started" class="btn btn-light w-100">Learn More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <app-testimonials></app-testimonials>
     
@@ -546,7 +472,6 @@
     
     /* Why Choose Us Section */
     .why-us-section {
-      padding: 80px 0;
       background-color: #fff;
     }
     
@@ -585,37 +510,7 @@
       background-color: #f5f5f5;
     }
     
-    .program-card {
-      background-color: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-      height: 100%;
-    }
-    
-    .program-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-    }
-    
-    .program-card.featured {
-      background-color: #000;
-      color: white;
-      transform: scale(1.05);
-    }
-    
-    .program-card.featured:hover {
-      transform: translateY(-10px) scale(1.05);
-    }
-    
-    .program-header {
-      padding: 20px;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      position: relative;
-    }
-    
-    .featured .program-header {
+    .featured {
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
@@ -635,26 +530,8 @@
       padding: 20px;
     }
     
-    .program-features {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 30px;
-    }
     
-    .program-features li {
-      margin-bottom: 15px;
-      display: flex;
-      align-items: flex-start;
-    }
-    
-    .program-features li i {
-      color: #000;
-      margin-right: 10px;
-      margin-top: 4px;
-      flex-shrink: 0;
-    }
-    
-    .featured .program-features li i {
+    .featured  {
       color: #fff;
     }
     
@@ -663,17 +540,6 @@
       background-color: #000;
       padding: 80px 0;
       position: relative;
-    }
-    
-    .cta-buttons .btn {
-      padding: 12px 30px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    
-    .cta-buttons .btn:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
     
     /* Media Queries */
@@ -695,21 +561,9 @@
         font-size: 2rem;
       }
       
-      .why-us-section, 
-      .programs-section {
-        padding: 60px 0;
-      }
       
       .reason-card {
         margin-bottom: 30px;
-      }
-      
-      .program-card.featured {
-        transform: none;
-      }
-      
-      .program-card.featured:hover {
-        transform: translateY(-10px);
       }
     }
     
@@ -718,12 +572,6 @@
         height: 60vh;
         padding: 60px 0;
         text-align: center;
-      }
-      
-      .hero-section .btn {
-        margin: 0 auto;
-        display: block;
-        max-width: 200px;
       }
       
       .intro-section {
@@ -769,23 +617,12 @@
       .icon-wrapper {
         margin: 0 auto 20px;
       }
-      
-      .program-card {
-        margin-bottom: 30px;
-      }
-      
+
       .cta-section {
         padding: 50px 0;
       }
-      
-      .cta-buttons .btn {
-        display: block;
-        width: 100%;
-        max-width: 200px;
-        margin: 0 auto;
-      }
+  
     }
-    
     @media (max-width: 480px) {
       .hero-section {
         padding: 50px 0;
@@ -801,23 +638,6 @@
       
       .features-section {
         padding: 40px 0;
-      }
-      
-      .why-us-section, 
-      .programs-section {
-        padding: 40px 0;
-      }
-      
-      .program-card {
-        padding: 15px;
-      }
-      
-      .program-header {
-        padding: 15px;
-      }
-      
-      .program-body {
-        padding: 15px;
       }
     }
   </style>

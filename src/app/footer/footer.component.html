@@ -30,7 +30,7 @@
           <h5 class="mb-3 invisible text-center text-md-start">SPACER</h5> <!-- Invisible spacer to align with other columns -->
           <div class="d-flex justify-content-center justify-content-md-start mb-3">
             <!-- Replace with your actual logo path -->
-            <img src="bwr_white.png" alt="Logo" height="50" class="me-2">
+            <img [routerLink]="['/home']" src="bwr_white.png" alt="Logo" height="50" class="me-2">
           </div>
           <!-- <p class="text-center text-md-start">Transform your fitness journey with our expert training programs designed for all levels.</p> -->
         </div>
@@ -39,11 +39,10 @@
         <div class="col-lg-4 col-md-6 mb-4">
           <h5 class="mb-3 text-center text-md-start">OUR PROGRAMS</h5>
           <ul class="list-unstyled text-center text-md-start">
-            <li class="mb-2"><a href="#" class="text-decoration-none text-light">Personal Training</a></li>
-            <li class="mb-2"><a href="#" class="text-decoration-none text-light">Group Classes</a></li>
-            <li class="mb-2"><a href="#" class="text-decoration-none text-light">Nutrition Coaching</a></li>
-            <li class="mb-2"><a href="#" class="text-decoration-none text-light">Online Programs</a></li>
-            <li class="mb-2"><a href="#" class="text-decoration-none text-light">Corporate Wellness</a></li>
+            <li class="mb-2"><a [routerLink]="['/personal-training']" class="text-decoration-none text-light">Personal Training</a></li>
+            <li class="mb-2"><a [routerLink]="['/1-1_coaching']" class="text-decoration-none text-light">1-1 Coaching</a></li>
+            <li class="mb-2"><a [routerLink]="['/diet-nitrition']" class="text-decoration-none text-light">Diet and Nutrition</a></li>
+            <li class="mb-2"><a [routerLink]="['/online-programs']" class="text-decoration-none text-light">Online Programs</a></li>
           </ul>
         </div>
   

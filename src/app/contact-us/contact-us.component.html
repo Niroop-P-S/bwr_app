@@ -1,1 +1,220 @@
-<p>contact-us works!</p>
+<!-- Combined Contact Section -->
+<div class="contact-us-page">
+  <!-- Hero Section -->
+  <section class="hero-section text-white text-center">
+    <img src="anandbg2.JPG" alt="Hero Image" class="hero-image">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="row align-items-center min-vh-40">
+        <div class="col-lg-8 mx-auto">
+          <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
+          <p class="lead mb-4">We'd love to hear from you! Fill out the form below to get in touch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="contact-section py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Details Column -->
+      <div class="col-lg-5 mb-5 mb-lg-0">
+        <div class="h-100 d-flex flex-column">
+          <h2 class="mb-4 text-center">Contact Details</h2>
+          <div class="contact-details-wrapper flex-grow-1 d-flex flex-column justify-content-between">
+            <div class="contact-info-card mb-4">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-geo-alt fs-3 me-3"></i>
+                <div>
+                  <h5 class="mb-1">Address</h5>
+                  <p class="mb-0">123 Main Street<br>Bangalore, Karnataka 560001</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-info-card mb-4">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-envelope fs-3 me-3"></i>
+                <div>
+                  <h5 class="mb-1">Email</h5>
+                  <p class="mb-0"><a href="mailto:info&#64;bwr.com">info&#64;bwr.com</a></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-info-card mb-4">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-instagram fs-3 me-3"></i>
+                <div>
+                  <h5 class="mb-1">Instagram</h5>
+                  <p class="mb-0"><a href="https://instagram.com/bwr_official" target="_blank">&#64;bwr_official</a></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-info-card">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-telephone fs-3 me-3"></i>
+                <div>
+                  <h5 class="mb-1">Phone</h5>
+                  <p class="mb-0"><a href="tel:+919876543210">+91 98765 43210</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Get in Touch Form Column -->
+<div class="col-lg-7">
+  <div class="card glassmorphism h-100">
+    <div class="card-body p-4 d-flex flex-column">
+      <h2 class="mb-4 text-center text-white">Get in Touch</h2>
+      <form class="flex-grow-1 d-flex flex-column" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="row mb-3">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <label for="name" class="form-label text-white">Name</label>
+            <input type="text" class="form-control glass-input" id="name" formControlName="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6">
+            <label for="phone" class="form-label text-white">Mobile Number</label>
+            <div class="input-group glass-group">
+              <span class="input-group-text glass-span">+91</span>
+              <input type="tel" class="form-control glass-input" id="phone" formControlName="phone" placeholder="9876543210" required>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label text-white">Email</label>
+          <input type="email" class="form-control glass-input" id="email" formControlName="email" placeholder="your.email&#64;example.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="program" class="form-label text-white">Program</label>
+          <select class="form-select glass-input" id="program" formControlName="program" required>
+            <option value="" selected disabled>Select a program</option>
+            <option value="program1">Fitness Program</option>
+            <option value="program2">Yoga Classes</option>
+            <option value="program3">Nutrition Coaching</option>
+            <option value="program4">Personal Training</option>
+          </select>
+        </div>
+        <div class="mb-4 flex-grow-1">
+          <label for="message" class="form-label text-white">Message</label>
+          <textarea class="form-control glass-input h-100" id="message" formControlName="message" style="min-height: 120px;" placeholder="Please write your message here..."></textarea>
+        </div>
+        <div class="text-center py-3 mt-auto">
+          <button type="submit" class="btn btn-outline-light px-5 glass-button" [disabled]="contactForm.invalid">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+</div>
+<style>
+  .hero-section {
+    position: relative;
+    color: white;
+    padding: 100px 0;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  .hero-section .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact-info-card {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+
+  .glassmorphism {
+    background: rgba(0, 0, 0, 0.872);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .glass-input, .glass-span {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+  }
+
+  .glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .glass-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-group {
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+
+  .glass-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s ease;
+  }
+
+  .glass-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-input option {
+    background-color: #212529;
+    color: white;
+  }
+
+  @media (max-width: 767px) {
+    .hero-section {
+      padding: 60px 0;
+    }
+    
+    .contact-info-card {
+      margin-bottom: 1rem;
+    }
+  }
+</style>
