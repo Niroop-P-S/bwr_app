@@ -9,18 +9,19 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { PostsComponent } from './posts/posts.component';
 import { CategoryPostsComponent } from './category-posts/category-posts.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
     { path: 'about-us', component: AboutUsComponent},
-    { path: '1-1_coaching', component: OneOneCoachComponent},
-    { path: 'personal-training', component: PersonalTrainingComponent},
-    { path: 'online-programs', component: OnlineProgramsComponent},
-    { path: 'diet-nitrition', component: DietNutritionComponent},
+    { path: 'programs/1-1_coaching', component: OneOneCoachComponent},
+    { path: 'programs/personal-training', component: PersonalTrainingComponent},
+    { path: 'programs/online-programs', component: OnlineProgramsComponent},
+    { path: 'programs/diet-nutrition', component: DietNutritionComponent},
     { path: 'contact-us', component: ContactUsComponent},
     { path: 'blogs', component: BlogsComponent},
     { path: 'post/:id', component: PostsComponent},
-    { path: 'category-posts/:id', component: CategoryPostsComponent}
-
+    { path: 'category-posts/:id', component: CategoryPostsComponent},
+    { path: '**', component: NotfoundComponent } // Wildcard route for 404
 ];

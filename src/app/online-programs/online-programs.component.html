@@ -2,7 +2,7 @@
     <!-- Hero Section -->
     <section class="hero-section text-white">
       <div class="hero-image-container">
-        <img src="anandbg.JPG" alt="Personal Coach" class="hero-image">
+        <img src="online_wide.JPG" alt="Personal Coach" class="hero-image">
         <div class="overlay"></div>
       </div>
       <div class="container">
@@ -10,7 +10,7 @@
           <div class="col-lg-7 position-relative z-index-1">
             <h1 class="display-4 fw-bold mb-3">Online Fitness Programs</h1>
             <p class="lead mb-4">Achieve Your Goals with Our Pre-Written Plans</p>
-            <a href="#purchase" class="btn btn-light btn-lg px-4 shadow-sm">Book Free Consultation</a>
+            <a [routerLink]="['/contact-us']" class="btn btn-light btn-lg px-4 shadow-sm">Book Free Consultation</a>
           </div>
         </div>
       </div>
@@ -220,7 +220,7 @@
               <span class="price-text">Per Program</span>
             </div>
             <div class="cta-buttons">
-              <button class="btn btn-light btn-lg mb-3 mb-md-0 me-md-3">Book Free Consultation</button>
+              <button [routerLink]="['/contact-us']" class="btn btn-light btn-lg mb-3 mb-md-0 me-md-3">Book Free Consultation</button>
             </div>
           </div>
         </div>
@@ -475,7 +475,7 @@
     
     /* CTA Section */
     .cta-section {
-      background-color: #000;
+      background-color: #212529;
       position: relative;
       padding: 80px 0;
     }

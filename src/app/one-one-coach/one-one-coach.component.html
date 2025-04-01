@@ -2,7 +2,7 @@
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="hero-image-container">
-      <img src="Pavanbg.jpg" alt="Personal Coach" class="hero-image">
+      <img src="1-1_wide.JPEG" alt="Personal Coach" class="hero-image">
       <div class="overlay"></div>
     </div>
     <div class="container position-relative">
@@ -10,8 +10,8 @@
         <div class="col-lg-7">
           <div class="hero-content">
             <h1 class="display-4 fw-bold text-white mb-3">One-on-One Personal Coaching</h1>
-            <p class="lead text-white mb-4">Personalized training to help you achieve your fitness goals</p>
-            <a href="#consultation" class="btn btn-light btn-lg shadow">Book Free Consultation</a>
+            <p class="lead text-white mb-4">Elevate Your Fitness with Personalized Coaching</p>
+            <a [routerLink]="['/contact-us']" class="btn btn-light btn-lg shadow">Book Free Consultation</a>
           </div>
         </div>
       </div>
@@ -26,11 +26,7 @@
           <div class="intro-content p-4 bg-white shadow-lg rounded-lg">
             <h2 class="section-title text-center mb-4">Why Choose Personal Coaching?</h2>
             <p class="lead">
-              Our one-on-one coaching program is designed to provide you with personalized 
-              attention and guidance from experienced fitness professionals. Whether you're 
-              just starting your fitness journey or looking to take your performance to the 
-              next level, our coaches will work closely with you to create a customized plan 
-              that aligns with your goals, preferences, and lifestyle.
+              Every fitness journey is unique, and at Build with Resilience, we understand the importance of a tailored approach. Our 1:1 coaching offers a personalized training experience designed to help you achieve your specific goals, whether that’s losing weight, building muscle, enhancing athletic performance, or simply adopting a healthier lifestyle.
             </p>
           </div>
         </div>
@@ -68,7 +64,7 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#coachingFeatures">
                 <div class="accordion-body">
-                  <p>Your coach will develop a personalized training program tailored specifically to your goals, fitness level, and preferences. Each workout is designed to challenge you appropriately while ensuring steady progress.</p>
+                  <p>We create customized workout programs that are specifically designed for you, taking into account your fitness level, goals, preferences, and any physical limitations. Each session is carefully planned to keep your workouts effective, challenging, and engaging.</p>
                   <div class="feature-details">
                     <div class="detail-item">
                       <i class="bi bi-check2-circle"></i>
@@ -93,27 +89,13 @@
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   <div class="feature-header">
                     <i class="bi bi-clipboard-check me-3"></i>
-                    <span>Form and Technique Guidance</span>
+                    <span>Flexible Scheduling Options</span>
                   </div>
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#coachingFeatures">
                 <div class="accordion-body">
-                  <p>Proper form is essential for both safety and results. Your coach will provide hands-on guidance to ensure you perform exercises correctly, reducing injury risk while maximizing effectiveness.</p>
-                  <div class="feature-details">
-                    <div class="detail-item">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Real-time form correction</span>
-                    </div>
-                    <div class="detail-item">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Exercise demonstrations</span>
-                    </div>
-                    <div class="detail-item">
-                      <i class="bi bi-check2-circle"></i>
-                      <span>Safety-focused training</span>
-                    </div>
-                  </div>
+                  <p>Life is busy, and we get that. Our flexible scheduling allows you to fit training sessions into your life, whether you prefer mornings, evenings, or any time in between.</p>
                 </div>
               </div>
             </div>
@@ -130,7 +112,7 @@
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#coachingFeatures">
                 <div class="accordion-body">
-                  <p>Nutrition plays a crucial role in achieving fitness goals. Your coach will provide dietary recommendations and meal planning advice to complement your training regimen.</p>
+                  <p>Achieving fitness goals requires more than just working out; nutrition plays a crucial role too. We provide personalized nutritional guidance and meal planning advice to help you fuel your body correctly and maximize your results.</p>
                   <div class="feature-details">
                     <div class="detail-item">
                       <i class="bi bi-check2-circle"></i>
@@ -161,7 +143,7 @@
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#coachingFeatures">
                 <div class="accordion-body">
-                  <p>Staying motivated is half the battle. Your coach serves as your accountability partner, providing encouragement, celebrating milestones, and keeping you focused on your goals.</p>
+                  <p>Motivation can waver, but with your coach by your side, you’ll have the support you need to stay on track. We’re here to offer encouragement, celebrate your successes, and help you overcome any challenges along the way.</p>
                   <div class="feature-details">
                     <div class="detail-item">
                       <i class="bi bi-check2-circle"></i>
@@ -303,8 +285,8 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <h2 class="h2 mb-4">Ready to Transform Your Fitness Journey?</h2>
-          <p class="lead mb-4">Schedule a free consultation with one of our expert coaches to discuss your goals and how we can help you achieve them.</p>
-          <button class="btn btn-light btn-lg me-3 mb-3 mb-md-0">Book Free Consultation</button>
+          <p class="lead mb-4">Ready to take the next step in your fitness journey? Schedule a free consultation with us to learn more about our 1:1 coaching and how we can help you reach your goals. Let’s work together to build resilience and make fitness a sustainable part of your life.</p>
+          <button [routerLink]="['/contact-us']" class="btn btn-light btn-lg me-3 mb-3 mb-md-0">Book Free Consultation</button>
         </div>
       </div>
     </div>
@@ -602,7 +584,7 @@
   
   /* CTA Section */
   .cta-section {
-    background-color: #000;
+    background-color: #212529;
     position: relative;
     padding: 80px 0;
   }

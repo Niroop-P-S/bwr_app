@@ -23,7 +23,7 @@ export class ContactUsComponent implements OnInit {
       phone: ['', [Validators.required, Validators.pattern('[0-9]{10}')]],
       email: ['', [Validators.required, Validators.email]],
       program: ['', Validators.required],
-      message: ['']
+      message: ['', Validators.required]
     });
   }
 

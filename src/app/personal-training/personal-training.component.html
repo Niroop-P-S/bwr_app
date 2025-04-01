@@ -2,7 +2,7 @@
     <!-- Hero Section -->
     <section class="hero-section text-white">
       <div class="hero-image-container">
-        <img src="Pavanbg.jpg" alt="Personal Coach" class="hero-image">
+        <img src="ptraining_wide.jpg" alt="Personal Coach" class="hero-image">
         <div class="overlay"></div>
       </div>
       <div class="container">
@@ -10,7 +10,7 @@
           <div class="col-lg-8 position-relative">
             <h1 class="display-4 fw-bold mb-3">Online Personal Training Programs</h1>
             <p class="lead mb-4">Your Path to Fitness Success Anywhere in the World</p>
-            <a href="#get-started" class="btn btn-light btn-lg shadow-sm">Book Free Consultation</a>
+            <a [routerLink]="['/contact-us']" class="btn btn-light btn-lg shadow-sm">Book Free Consultation</a>
           </div>
         </div>
       </div>
@@ -176,62 +176,137 @@
     </section>
     
     <!-- Why Choose Us Section -->
-    <section class="why-us-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-lg-8 text-center">
-            <h2 class="section-title">Why Choose Us</h2>
-            <div class="section-divider mx-auto">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+    <!-- Why Choose Us Section -->
+<section class="why-choose-us py-5">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col-12">
+        <h2 class="section-title">Why Choose Us?</h2>
+        <div class="title-underline"></div>
+      </div>
+    </div>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+      <!-- Specialization -->
+      <div class="col">
+        <div class="feature-card h-100">
+          <div class="icon-wrapper mb-3">
+            <i class="fas fa-dumbbell"></i>
           </div>
-        </div>
-        
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div class="reason-card h-100">
-              <div class="icon-wrapper mb-4">
-                <i class="bi bi-trophy"></i>
-              </div>
-              <h3>Specialization in Weight Loss and Strength Training</h3>
-              <p>We focus on these two key areas to help you achieve measurable results. Our programs are designed to target your specific goals, whether that's losing weight, building muscle, or improving overall fitness.</p>
-            </div>
-          </div>
-          
-          <div class="col-md-6">
-            <div class="reason-card h-100">
-              <div class="icon-wrapper mb-4">
-                <i class="bi bi-heart-pulse"></i>
-              </div>
-              <h3>Expert Guidance and Support</h3>
-              <p>Our certified trainers have years of experience helping clients achieve their fitness goals. They provide personalized guidance, ongoing support, and the motivation you need to succeed.</p>
-            </div>
-          </div>
-          
-          <div class="col-md-6">
-            <div class="reason-card h-100">
-              <div class="icon-wrapper mb-4">
-                <i class="bi bi-lightning-charge"></i>
-              </div>
-              <h3>Results-Driven Approach</h3>
-              <p>We believe in measurable progress. Our programs include regular assessments and adjustments to ensure you're continuously moving toward your goals and seeing tangible results along the way.</p>
-            </div>
-          </div>
-          
-          <div class="col-md-6">
-            <div class="reason-card h-100">
-              <div class="icon-wrapper mb-4">
-                <i class="bi bi-people"></i>
-              </div>
-              <h3>Supportive Community</h3>
-              <p>Join a global community of like-minded individuals who are on their own fitness journeys. Share experiences, celebrate victories, and find additional motivation through our supportive network.</p>
-            </div>
-          </div>
+          <h3 class="feature-title">Specialization</h3>
+          <p class="feature-text">We focus on weight loss and strength training to help you achieve measurable results.</p>
         </div>
       </div>
-    </section>
+      
+      <!-- Custom Nutrition -->
+      <div class="col">
+        <div class="feature-card h-100">
+          <div class="icon-wrapper mb-3">
+            <i class="fas fa-apple-alt"></i>
+          </div>
+          <h3 class="feature-title">Custom Nutrition Plans</h3>
+          <p class="feature-text">Tailored to your individual needs, ensuring your body gets the right fuel.</p>
+        </div>
+      </div>
+      
+      <!-- One-on-One Calls -->
+      <div class="col">
+        <div class="feature-card h-100">
+          <div class="icon-wrapper mb-3">
+            <i class="fas fa-video"></i>
+          </div>
+          <h3 class="feature-title">One-on-One Video Calls</h3>
+          <p class="feature-text">Direct interaction with your trainer for personalized guidance and motivation.</p>
+        </div>
+      </div>
+      
+      <!-- Global Reach -->
+      <div class="col">
+        <div class="feature-card h-100">
+          <div class="icon-wrapper mb-3">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3 class="feature-title">Global Reach</h3>
+          <p class="feature-text">Accessible from anywhere in the world, making fitness convenient and flexible.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-choose-us {
+    background-color: #f8f9fa;
+  }
+  
+  .section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .title-underline {
+    height: 3px;
+    width: 70px;
+    background-color: #ff6b6b;
+    margin: 0 auto 2rem;
+  }
+  
+  .feature-card {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  }
+  
+  .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 1.5rem;
+  }
+  
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .feature-text {
+    color: #6c757d;
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 991px) {
+    .feature-card {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .icon-wrapper {
+      width: 60px;
+      height: 60px;
+      font-size: 1.25rem;
+    }
+  }
+</style>
 
 
     <app-testimonials></app-testimonials>
@@ -245,8 +320,7 @@
             <p class="lead mb-5">Don't let anything stand in the way of your fitness goals. Our online personal training programs offer a comprehensive, personalized approach that adapts to your life, no matter where you are. Start your journey with us today and discover the difference that expert guidance and a tailored program can make in your fitness journey.</p>
             
             <div class="cta-buttons">
-              <a href="#" class="btn btn-light btn-lg me-3 mb-3 mb-md-0">Get Started Now</a>
-              <a href="#" class="btn btn-outline-light btn-lg">Contact Us</a>
+              <a [routerLink]="['/contact-us']" class="btn btn-light btn-lg me-3 mb-3 mb-md-0">Book Free Consultation</a>
             </div>
           </div>
         </div>
@@ -470,40 +544,6 @@
       font-size: 1.1rem;
     }
     
-    /* Why Choose Us Section */
-    .why-us-section {
-      background-color: #fff;
-    }
-    
-    .reason-card {
-      background-color: #f9f9f9;
-      padding: 30px;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-      border-top: 5px solid #000;
-    }
-    
-    .reason-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-    
-    .icon-wrapper {
-      width: 70px;
-      height: 70px;
-      background-color: #000;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    
-    .icon-wrapper i {
-      font-size: 1.8rem;
-      color: white;
-    }
-    
     /* Programs Section */
     .programs-section {
       padding: 80px 0;
@@ -537,7 +577,7 @@
     
     /* CTA Section */
     .cta-section {
-      background-color: #000;
+      background-color: #212529;
       padding: 80px 0;
       position: relative;
     }
