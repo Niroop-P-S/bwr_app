@@ -13,106 +13,146 @@
     </div>
   </section>
 
-<section class="contact-section py-5">
-  <div class="container">
-    <div class="row">
-      <!-- Contact Details Column -->
-      <div class="col-lg-5 mb-5 mb-lg-0">
-        <div class="h-100 d-flex flex-column">
-          <h2 class="mb-4 text-center">Contact Details</h2>
-          <div class="contact-details-wrapper flex-grow-1 d-flex flex-column justify-content-between">
-            <div class="contact-info-card mb-4">
-              <div class="d-flex align-items-center mb-3">
-                <i class="bi bi-geo-alt fs-3 me-3"></i>
-                <div>
-                  <h5 class="mb-1">Address</h5>
-                  <p class="mb-0">Hyderabad, Telangana</p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="contact-info-card mb-4">
-              <div class="d-flex align-items-center mb-3">
-                <i class="bi bi-envelope fs-3 me-3"></i>
-                <div>
-                  <h5 class="mb-1">Email</h5>
-                  <p class="mb-0"><a href="mailto:info&#64;bwr.com">info&#64;bwr.com</a></p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="contact-info-card mb-4">
-              <div class="d-flex align-items-center mb-3">
-                <i class="bi bi-instagram fs-3 me-3"></i>
-                <div>
-                  <h5 class="mb-1">Instagram</h5>
-                  <p class="mb-0"><a href="https://www.instagram.com/builtwithresilience" target="_blank">&#64;builtwithresilience</a></p>
-                </div>
-              </div>
-            </div>
-            
-            <div class="contact-info-card">
-              <div class="d-flex align-items-center mb-3">
-                <i class="bi bi-telephone fs-3 me-3"></i>
-                <div>
-                  <h5 class="mb-1">Phone</h5>
-                  <p class="mb-0"><a href="tel:+918008884655">+91 8008884655</a></p>
-                  <p class="mb-0"><a href="tel:+919000966672">+91 9000966672</a></p>
+  <section class="contact-section py-4"> <!-- Reduced padding -->
+    <div class="container">
+      <div class="row g-4"> <!-- Added g-4 to reduce gap between columns -->
 
+        <!-- Get in Touch Form Column -->
+        <div class="col-lg-7">
+          <div class="card glassmorphism h-100">
+            <div class="card-body p-4 d-flex flex-column">
+              <h2 class="mb-4 text-center text-white">Get in Touch</h2>
+              <form class="flex-grow-1 d-flex flex-column" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <!-- First Name and Last Name -->
+                <div class="row mt-3">
+                  <div class="col-md-12">
+                    <label for="name" class="form-label text-white">Full Name</label>
+                    <input type="text" class="form-control glass-input" id="firstname" formControlName="first_name"
+                      placeholder="Your First Name" required />
+                  </div>
+                </div>
+
+                <!-- Age and Location -->
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                    <label for="age" class="form-label text-white">Age</label>
+                    <input type="number" class="form-control glass-input" id="age" formControlName="age"
+                      placeholder="Your Age" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="location" class="form-label text-white">Location</label>
+                    <input type="text" class="form-control glass-input" id="location" formControlName="location"
+                      placeholder="Your Location" required />
+                  </div>
+                </div>
+
+                <!-- Phone Number with Country Code -->
+                <div class="row mt-3">
+                  <div class="col-md-12">
+                    <label for="phone" class="form-label text-white">Mobile Number</label>
+                    <div class="input-group glass-group">
+                      <input type="text" class="form-control glass-input" id="country_code"
+                        formControlName="country_code" placeholder="+91" required style="max-width: 80px;" />
+                      <input type="tel" class="form-control glass-input" id="phone" formControlName="tel_660"
+                        placeholder="9876543210" required />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div class="row mt-3">
+                  <div class="col-md-12">
+                    <label for="your_email" class="form-label text-white">Email</label>
+                    <input type="email" class="form-control glass-input" id="your_email" formControlName="your_email"
+                      placeholder="your.email@example.com" required />
+                  </div>
+                </div>
+
+                <!-- Program -->
+                <div class="row mt-3">
+                  <div class="col-md-12">
+                    <label for="your_program" class="form-label text-white">Program</label>
+                    <select class="form-select glass-input" id="your_program" formControlName="your_subject" required>
+                      <option value="" selected disabled>Select a program</option>
+                      <option value="Online Coaching">Online Coaching</option>
+                      <option value="1-1 Offline Coaching">1-1 Offline Coaching</option>
+                      <option value="Nutrition Consulting">Nutrition Consulting</option>
+                      <option value="Corporate Wellness Program">Corporate Wellness Program</option>
+                      <option value="App Based Program">App Based Program</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- What are your main goals? -->
+            <div class="row mt-3">
+              <div class="col-md-12">
+                <label for="main_goals" class="form-label text-white">What are your main goals?</label>
+                <select class="form-select glass-input" id="main_goals" formControlName="your_message" required>
+                  <option value="" selected disabled>Select your main goal</option>
+                  <option value="lose_weight">Lose Weight</option>
+                  <option value="build_muscle">Build Muscle</option>
+                  <option value="tone_up">Tone Up</option>
+                  <option value="gain_confidence">Gain Confidence</option>
+                </select>
+              </div>
+            </div>
+
+
+                <!-- Submit Button -->
+                <div class="text-center py-3">
+                  <button type="submit" class="btn btn-outline-light px-5 glass-button"
+                    [disabled]="contactForm.invalid || isSubmitting">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Details Column -->
+        <div class="col-lg-5">
+          <div class="card border-0 shadow-none"> <!-- Removed 'h-100' to fit content -->
+            <div class="card-body p-4">
+              <h2 class="mb-4 text-center">Contact Details</h2>
+              <div class="contact-details-wrapper">
+                <div class="contact-info-card mb-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-envelope fs-3 me-3"></i>
+                    <div>
+                      <h5 class="mb-1">Email</h5>
+                      <p class="mb-0"><a href="mailto:transform&#64;bwr.life">transform&#64;bwr.life</a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-info-card mb-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-instagram fs-3 me-3"></i>
+                    <div>
+                      <h5 class="mb-1">Instagram</h5>
+                      <p class="mb-0"><a href="https://www.instagram.com/builtwithresilience"
+                          target="_blank">&#64;builtwithresilience</a></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-info-card">
+                  <div class="d-flex align-items-center mb-3">
+                    <i class="bi bi-telephone fs-3 me-3"></i>
+                    <div>
+                      <h5 class="mb-1">Phone</h5>
+                      <p class="mb-0"><a href="tel:+918008884655">+91 8008884655</a></p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-      <!-- Get in Touch Form Column -->
-<div class="col-lg-7">
-  <div class="card glassmorphism h-100">
-    <div class="card-body p-4 d-flex flex-column">
-      <h2 class="mb-4 text-center text-white">Get in Touch</h2>
-      <form class="flex-grow-1 d-flex flex-column" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-        <div class="row mb-3">
-          <div class="col-md-6 mb-3 mb-md-0">
-            <label for="name" class="form-label text-white">Name</label>
-            <input type="text" class="form-control glass-input" id="name" formControlName="name" placeholder="Your Name" required>
-          </div>
-          <div class="col-md-6">
-            <label for="phone" class="form-label text-white">Mobile Number</label>
-            <div class="input-group glass-group">
-              <span class="input-group-text glass-span">+91</span>
-              <input type="tel" class="form-control glass-input" id="phone" formControlName="phone" placeholder="9876543210" required>
-            </div>
-          </div>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label text-white">Email</label>
-          <input type="email" class="form-control glass-input" id="email" formControlName="email" placeholder="your.email&#64;example.com" required>
-        </div>
-        <div class="mb-3">
-          <label for="program" class="form-label text-white">Program</label>
-          <select class="form-select glass-input" id="program" formControlName="program" required>
-            <option value="" selected disabled>Select a program</option>
-            <option value="program1">Fitness Program</option>
-            <option value="program2">Yoga Classes</option>
-            <option value="program3">Nutrition Coaching</option>
-            <option value="program4">Personal Training</option>
-          </select>
-        </div>
-        <div class="mb-4 flex-grow-1">
-          <label for="message" class="form-label text-white">Message</label>
-          <textarea class="form-control glass-input h-100" id="message" formControlName="message" style="min-height: 120px;" placeholder="Please write your message here..."></textarea>
-        </div>
-        <div class="text-center py-3 mt-auto">
-          <button type="submit" class="btn btn-outline-light px-5 glass-button" [disabled]="contactForm.invalid">Submit</button>
-        </div>
-      </form>
     </div>
-  </div>
-</div>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
 <style>
   .hero-section {
@@ -155,7 +195,7 @@
 
   .contact-info-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 
   .glassmorphism {
@@ -167,7 +207,8 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 
-  .glass-input, .glass-span {
+  .glass-input,
+  .glass-span {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -213,7 +254,7 @@
     .hero-section {
       padding: 60px 0;
     }
-    
+
     .contact-info-card {
       margin-bottom: 1rem;
     }

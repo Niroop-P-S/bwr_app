@@ -8,21 +8,24 @@
       <div class="container">
         <div class="row align-items-center min-vh-40">
           <div class="col-lg-8 position-relative">
-            <h1 class="display-4 fw-bold mb-3">Online Personal Training Programs</h1>
+            <h1 class="display-4 fw-bold mb-3">Online Coaching</h1>
             <p class="lead mb-4">Your Path to Fitness Success Anywhere in the World</p>
             <a [routerLink]="['/contact-us']" class="btn btn-light btn-lg shadow-sm">Book Free Consultation</a>
           </div>
         </div>
       </div>
     </section>
-  
+
     <!-- Introduction Section -->
     <section class="intro-section py-5">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <div class="intro-content">
-              <p>In today's fast-paced world, achieving your fitness goals requires more than just dedication; it demands a program tailored to your unique needs and lifestyle. Our online personal training programs offer a comprehensive solution that caters to clients globally, focusing on weight loss and strength training. Whether you're a beginner looking to shed pounds or an experienced athlete aiming to build muscle, our programs are designed to help you succeed.</p>
+              <h2 class="section-title text-center mb-4">Why Choose Online Coaching</h2>
+              <p class="lead">
+                In today's fast-paced world, achieving your fitness goals requires more than just dedication; it demands a program tailored to your unique needs and lifestyle. Our online personal training programs offer a comprehensive solution that caters to clients globally, focusing on weight loss and strength training. Whether you're a beginner looking to shed pounds or an experienced athlete aiming to build muscle, our programs are designed to help you succeed.
+              </p>
             </div>
           </div>
         </div>
@@ -177,7 +180,7 @@
     
     <!-- Why Choose Us Section -->
     <!-- Why Choose Us Section -->
-<section class="why-choose-us py-5">
+<!--<section class="why-choose-us py-5">
   <div class="container">
     <div class="row text-center mb-5">
       <div class="col-12">
@@ -187,7 +190,6 @@
     </div>
     
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-      <!-- Specialization -->
       <div class="col">
         <div class="feature-card h-100">
           <div class="icon-wrapper mb-3">
@@ -198,7 +200,6 @@
         </div>
       </div>
       
-      <!-- Custom Nutrition -->
       <div class="col">
         <div class="feature-card h-100">
           <div class="icon-wrapper mb-3">
@@ -209,7 +210,6 @@
         </div>
       </div>
       
-      <!-- One-on-One Calls -->
       <div class="col">
         <div class="feature-card h-100">
           <div class="icon-wrapper mb-3">
@@ -220,7 +220,6 @@
         </div>
       </div>
       
-      <!-- Global Reach -->
       <div class="col">
         <div class="feature-card h-100">
           <div class="icon-wrapper mb-3">
@@ -232,7 +231,10 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+<app-mob-features></app-mob-features>
+<app-app-banner></app-app-banner>
 
 <style>
   .why-choose-us {
@@ -406,16 +408,6 @@
       z-index: 1;
     }
     
-    /* Intro Section */
-    .intro-section {
-      padding: 60px 0;
-    }
-    
-    .intro-content {
-      padding: 30px;
-      border-left: 5px solid #000;
-      background-color: #f9f9f9;
-    }
     
     /* Features Section with Black Background and Glassmorphism */
     .features-section {
@@ -589,10 +581,6 @@
         padding: 80px 0;
       }
       
-      .intro-section {
-        padding: 50px 0;
-      }
-      
       .features-section {
         padding: 80px 0;
       }
@@ -612,16 +600,6 @@
         height: 60vh;
         padding: 60px 0;
         text-align: center;
-      }
-      
-      .intro-section {
-        padding: 40px 0;
-      }
-      
-      .intro-content {
-        padding: 20px;
-        border-left: none;
-        border-top: 5px solid #000;
       }
       
       .features-section {

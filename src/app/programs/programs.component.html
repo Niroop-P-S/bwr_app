@@ -5,98 +5,8 @@
             <p class="mx-auto text-center text-muted" style="max-width: 500px;">Tailored Workouts, Expert guidance and Comprehensive Programs to Meet All Your Fitness Needs</p>
         </div>
         
-        <!-- Desktop Carousel (visible on md screens and up) -->
-        <div id="programCarousel" class="carousel slide d-none d-md-block">
-            <div class="carousel-inner">
-                <!-- First Slide (3 cards) -->
-                <div class="carousel-item active">
-                    <div class="row g-4">
-                        <!-- Card 1 (Light) -->
-                        <div class="col-md-4">
-                            <div class="card shadow-sm card-light">
-                                <div class="card-img-container" style="height: 250px; overflow: hidden; padding: 10px;">
-                                    <img src="program1.jpeg" class="card-img-top rounded" alt="Personal Training" style="object-fit: cover; height: 100%; width: 100%;">
-                                </div>
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title fw-bold">Online Personal Training</h5>
-                                    <p class="card-text flex-grow-1">Your Path to Fitness Success In fast-paced world.</p>
-                                    <div class="text-center">
-                                        <a [routerLink]="['/programs/personal-training']" class="btn btn-dark mt-2">Explore More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Card 2 (Dark) -->
-                        <div class="col-md-4">
-                            <div class="card shadow-sm card-dark">
-                                <div class="card-img-container-dark" style="height: 250px; overflow: hidden; padding: 10px;">
-                                    <img src="program2.JPG" class="card-img-top rounded" alt="Group Fitness" style="object-fit: cover; height: 100%; width: 100%;">
-                                </div>
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title fw-bold text-white">1-1 Coaching</h5>
-                                    <p class="card-text flex-grow-1 text-white">Elevate Your Fitness with Personalized Coaching.</p>
-                                    <div class="text-center">
-                                        <a [routerLink]="['/programs/1-1_coaching']" class="btn btn-light mt-2">Explore More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Card 3 (Light) -->
-                        <div class="col-md-4">
-                            <div class="card shadow-sm card-light">
-                                <div class="card-img-container" style="height: 250px; overflow: hidden; padding: 10px;">
-                                    <img src="program3.png" class="card-img-top rounded" alt="Nutrition Coaching" style="object-fit: cover; height: 100%; width: 100%;">
-                                </div>
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title fw-bold">Diet and Nutrition</h5>
-                                    <p class="card-text flex-grow-1">Fuel Your Body, Transform Your Health.</p>
-                                    <div class="text-center">
-                                        <a [routerLink]="['/programs/diet-nutrition']" class="btn btn-dark mt-2">Explore More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Second Slide with single card that appears to be the 4th in a row -->
-                <div class="carousel-item">
-                    <div class="row g-4">
-                        <div class="col-md-4 offset-md-0">
-                            <div class="card shadow-sm card-dark">
-                                <div class="card-img-container-dark" style="height: 250px; overflow: hidden; padding: 10px;">
-                                    <img src="program4.JPG" class="card-img-top rounded" alt="Online Coaching" style="object-fit: cover; height: 100%; width: 100%;">
-                                </div>
-                                <div class="card-body d-flex flex-column text-center">
-                                    <h5 class="card-title fw-bold text-white">Online Programs</h5>
-                                    <p class="card-text flex-grow-1 text-white">Remote training programs with regular check-ins and adjustments to fit your schedule and location.</p>
-                                    <div class="text-center">
-                                        <a [routerLink]="['/programs/online-programs']" class="btn btn-light mt-2">Explore More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Navigation Arrows -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#programCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#programCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        
-        <!-- Mobile view (stacked cards, visible only on small screens) -->
-        <!-- Mobile view (horizontally scrollable cards, visible only on small screens) -->
-    <div class="d-md-none scroll-container">
-        <div class="d-flex flex-nowrap overflow-auto pb-3 scroll-wrapper">
+        <!-- Scrollable Cards (applies to all screen sizes) -->
+        <div class="scroll-container">
             <!-- Card 1 (Light) -->
             <div class="scroll-card">
                 <div class="card shadow-sm card-light h-100">
@@ -104,10 +14,10 @@
                         <img src="program1.jpeg" class="card-img-top rounded" alt="Personal Training" style="object-fit: cover; height: 100%; width: 100%;">
                     </div>
                     <div class="card-body d-flex flex-column text-center">
-                        <h5 class="card-title fw-bold">Online Personal Training</h5>
+                        <h5 class="card-title fw-bold">Online Coaching</h5>
                         <p class="card-text flex-grow-1">Your Path to Fitness Success In fast-paced world.</p>
                         <div class="text-center">
-                            <a [routerLink]="['/programs/personal-training']" class="btn btn-dark mt-2">Explore More</a>
+                            <a [routerLink]="['/programs/online-coaching']" class="btn btn-dark mt-2">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -117,13 +27,13 @@
             <div class="scroll-card">
                 <div class="card shadow-sm card-dark h-100">
                     <div class="card-img-container-dark" style="height: 200px; overflow: hidden; padding: 10px;">
-                        <img src="program2.JPG" class="card-img-top rounded" alt="Group Fitness" style="object-fit: cover; height: 100%; width: 100%;">
+                        <img src="program2.png" class="card-img-top rounded" alt="Group Fitness" style="object-fit: cover; height: 100%; width: 100%;">
                     </div>
                     <div class="card-body d-flex flex-column text-center">
-                        <h5 class="card-title fw-bold text-white">1-1 Coaching</h5>
+                        <h5 class="card-title fw-bold text-white">1-1 Offline Coaching</h5>
                         <p class="card-text flex-grow-1 text-white">Elevate Your Fitness with Personalized Coaching.</p>
                         <div class="text-center">
-                            <a [routerLink]="['/programs/1-1_coaching']" class="btn btn-light mt-2">Explore More</a>
+                            <a [routerLink]="['/programs/1-1-offline-coaching']" class="btn btn-light mt-2">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -136,10 +46,10 @@
                         <img src="program3.png" class="card-img-top rounded" alt="Nutrition Coaching" style="object-fit: cover; height: 100%; width: 100%;">
                     </div>
                     <div class="card-body d-flex flex-column text-center">
-                        <h5 class="card-title fw-bold">Diet and Nutrition</h5>
+                        <h5 class="card-title fw-bold">Nutrition Consulting</h5>
                         <p class="card-text flex-grow-1">Fuel Your Body, Transform Your Health.</p>
                         <div class="text-center">
-                            <a [routerLink]="['/programs/diet-nutrition']" class="btn btn-dark mt-2">Explore More</a>
+                            <a [routerLink]="['/programs/nutrition-consulting']" class="btn btn-dark mt-2">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -149,65 +59,69 @@
             <div class="scroll-card">
                 <div class="card shadow-sm card-dark h-100">
                     <div class="card-img-container-dark" style="height: 200px; overflow: hidden; padding: 10px;">
-                        <img src="program4.JPG" class="card-img-top rounded" alt="Online Progams" style="object-fit: cover; height: 100%; width: 100%;">
+                        <img src="program4.png" class="card-img-top rounded" alt="Corporate Wellness Programs" style="object-fit: cover; height: 100%; width: 100%;">
                     </div>
                     <div class="card-body d-flex flex-column text-center">
-                        <h5 class="card-title fw-bold text-white">Online Programs</h5>
-                        <p class="card-text flex-grow-1 text-white">Remote training programs with regular check-ins and adjustments to fit your schedule and location.</p>
+                        <h5 class="card-title fw-bold text-white">Corporate Wellness Programs</h5>
+                        <p class="card-text flex-grow-1 text-white">Empowering teams with health and wellness solutions.</p>
                         <div class="text-center">
-                            <a [routerLink]="['/programs/online-programs']" class="btn btn-light mt-2">Explore More</a>
+                            <a [routerLink]="['/programs/corporate-wellness-programs']" class="btn btn-light mt-2">Explore More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5 (Light) -->
+            <div class="scroll-card">
+                <div class="card shadow-sm card-light h-100">
+                    <div class="card-img-container" style="height: 200px; overflow: hidden; padding: 10px;">
+                        <img src="program5.png" class="card-img-top rounded" alt="App Based Programs" style="object-fit: cover; height: 100%; width: 100%;">
+                    </div>
+                    <div class="card-body d-flex flex-column text-center">
+                        <h5 class="card-title fw-bold">App Based Programs</h5>
+                        <p class="card-text flex-grow-1">Fuel Your Body, Transform Your Health.</p>
+                        <div class="text-center">
+                            <a [routerLink]="['/programs/app-based-programs']" class="btn btn-dark mt-2">Explore More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-    </div>
     </div>
 </section>
 
 <style>
-    /* Card effects */
-    * {
-        font-family: "Rubik", sans-serif;
+    /* Scrollable container styles */
+    .scroll-container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 15px; /* Add spacing between cards */
+    }
+
+    .scroll-container::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+    }
+
+    .scroll-card {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        width: 300px; /* Set a fixed width for cards */
     }
 
     .card {
-        height: auto;
-        max-height: 400px;
-        width: 300px;
-        border-radius: 16px;
-        overflow: hidden;
-        margin-bottom: 15px;
-        margin-left: auto;
-        margin-right: auto;
+        border-radius: 10px;
     }
-    
-    /* Light cards (odd numbers) */
-    .card-light {
-        background-color: #F9F9F9;
-    }
-    
-    /* Dark cards (even numbers) */
+
     .card-dark {
-        background-color: #212529;
-        border-color: #212529;
+        background-color: #343a40;
+        color: white;
     }
-    
-    .card-img-container {
-        border-radius: 16px;
+
+    .card-light {
         background-color: #f8f9fa;
-    }
-    
-    /* Carousel control styling */
-    .carousel-control-prev,
-    .carousel-control-next {
-        opacity: 0.8;
-        background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        top: 50%;
-        transform: translateY(-50%);
+        color: black;
     }
 </style>

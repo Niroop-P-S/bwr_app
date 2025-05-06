@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NgbCollapseModule, NgbDropdown, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap'
 import { RouterLink, RouterModule } from '@angular/router';
 
@@ -11,5 +11,13 @@ import { RouterLink, RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
 	isMenuCollapsed = true;
+  isScrolled = false;
+
+  // Listen to the window scroll event
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    // Check if the page is scrolled
+    this.isScrolled = window.scrollY > 0;
+  }
 
 }

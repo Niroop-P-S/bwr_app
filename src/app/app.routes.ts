@@ -10,15 +10,17 @@ import { BlogsComponent } from './blogs/blogs.component';
 import { PostsComponent } from './posts/posts.component';
 import { CategoryPostsComponent } from './category-posts/category-posts.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { AppBasedProgramsComponent } from './app-based-programs/app-based-programs.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     { path: 'home', component: HomeComponent},
     { path: 'about-us', component: AboutUsComponent},
-    { path: 'programs/1-1_coaching', component: OneOneCoachComponent},
-    { path: 'programs/personal-training', component: PersonalTrainingComponent},
-    { path: 'programs/online-programs', component: OnlineProgramsComponent},
-    { path: 'programs/diet-nutrition', component: DietNutritionComponent},
+    { path: 'programs/1-1-offline-coaching', component: OneOneCoachComponent},
+    { path: 'programs/online-coaching', component: PersonalTrainingComponent},
+    { path: 'programs/corporate-wellness-programs', component: OnlineProgramsComponent},
+    { path: 'programs/nutrition-consulting', component: DietNutritionComponent},
+    { path: 'programs/app-based-programs', component: AppBasedProgramsComponent},
     { path: 'contact-us', component: ContactUsComponent},
     { path: 'blogs', component: BlogsComponent},
     { path: 'post/:id', component: PostsComponent},
